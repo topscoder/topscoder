@@ -4,13 +4,13 @@ Developing in whatever language fits the most. Not speaking all of them though. 
 
 Gear I have around:
 
-- 🤖 Macbook
-- 🤖 Logitech MX Master
-- 🤖 Mac keyboard (I'm looking for a mechanical alternative)
-- 🤖 Sony WH-XM3
-- 🤖 Google Coral TPU
-- 🤖 Arduino's, Raspberry Pi's
-- 🤖 Philips Hue Bars w/ Circadian Lighting
+- 🤖 [Apple Macbook](https://amzn.to/2TZfxGt)
+- 🤖 [Logitech MX Master](https://amzn.to/3rUZpSU)
+- 🤖 [Mac keyboard](https://amzn.to/3ClWdEG) (I'm looking for a [mechanical alternative](https://amzn.to/2VtoRTH))
+- 🤖 [Sony WH-1000XM3](https://amzn.to/3lDCWbW)
+- 🤖 [Google Coral TPU](https://coral.ai/products/)
+- 🤖 [Arduino's, Raspberry Pi's](https://amzn.to/3lAMvs7)
+- 🤖 [Philips Hue Bars](https://amzn.to/2Vso5Go) w/ [Circadian Lighting](https://github.com/claytonjn/hass-circadian_lighting)
 
 Apps I'm using:
 
