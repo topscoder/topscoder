@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-Developing in whatever language fits the most. Not speaking all of them though. Mostly Python, PHP, Node.js. I often get a lot of inspiration by the tools, gear and other assets that are used by fellow developers. One of which is probably the most famous: https://wesbos.com/uses. At least it was my first inspiration for creating this profile here on GitHub.
+Developing in whatever language fits the most. Not speaking all of them though. Mostly Python, PHP, Node.js, C++. I often get a lot of inspiration by the tools, gear and other assets that are used by fellow developers. One of which is probably the most famous: https://wesbos.com/uses. At least it was my first inspiration for creating this profile here on GitHub.
 
 Apps I'm Using:
 
@@ -21,7 +21,8 @@ Other facts:
 - 🔭 I’m syncing most of my application settings using [Mackup](https://github.com/lra/mackup)
 - 🔭 [Starship](https://starship.rs/) shell prompt
 - 🔭 [FantasqueSansMono Nerd Font](https://www.nerdfonts.com)
-- I'm switching often between several Color Schemes in editors, but [Noctis](https://github.com/liviuschera/noctis) I like probably the most.
+- 🔭 I'm switching often between several Color Schemes in editors, but [Noctis](https://github.com/liviuschera/noctis) I like probably the most.
+- 🔭 I try to give back to the dev-community by contributing to Open Source software whenever I see Issues, Typos, Documentation issues etcetera. Started by fixing small typos and creating Pull Requests. You should do too!
 
 Inspiration sources I use:
 
@@ -30,13 +31,18 @@ Inspiration sources I use:
 - 🌟 https://github.com/dannyfritz/commit-message-emoji
 
 I'm interested in:
-- Web Application development
-- Mobile Application development
-- Reverse Engineering
-- Home Automation
-- Bot Automation
-- Gadgets
-- People and their mindset
+
+- 💡 Web Application development
+- 💡 Mobile Application development
+- 💡 Open Source Software Contribution
+- 💡 Reverse Engineering
+- 💡 Automotive Electrification
+- 💡 Automotive Hardware & Software
+- 💡 Arduino, Raspberry Pi
+- 💡 Home Automation
+- 💡 Bot Automation
+- 💡 Gadgets
+- 💡 People and their mindset
 
 
 <!--
