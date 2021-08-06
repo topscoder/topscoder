@@ -39,6 +39,7 @@ I'm interested in:
 - 💡 Automotive Electrification
 - 💡 Automotive Hardware & Software
 - 💡 Arduino, Raspberry Pi
+- 💡 Home Lab Hardware & Software
 - 💡 Home Automation
 - 💡 Bot Automation
 - 💡 Gadgets
