@@ -39,12 +39,14 @@ Inspiration sources I use:
 - 🌟 https://uses.tech
 - 🌟 https://gitmoji.dev
 - 🌟 https://github.com/dannyfritz/commit-message-emoji
+- 🌟 https://www.webfx.com/tools/emoji-cheat-sheet/
 
 I'm interested in:
 
 - 💡 Web Application development
 - 💡 Mobile Application development
 - 💡 Open Source Software Contribution
+- Continuous Integration
 - 💡 Reverse Engineering
 - 💡 Machine Learning
 - 💡 Artificial Intelligence
@@ -57,6 +59,23 @@ I'm interested in:
 - 💡 Gadgets
 - 💡 People and their mindset
 
+Visual Studio Code specific
+---
+
+Extensions I like:
+
+- 🧩 Auto Rename Tag
+- 🧩 Bracket Pair Colorizer
+- 🧩 Fluent Icons
+- 🧩 GitLens
+- 🧩 Indent-rainbow
+- 🧩 JetBrains IDE Keymap
+- 🧩 MagicPython
+- 🧩 Noctis
+- 🧩 Prettier
+- 🧩 Pylance
+- 🧩 Tabnine
+- 🧩 TODO highlight
 
 <!--
 **topscoder/topscoder** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
