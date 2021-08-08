@@ -25,11 +25,13 @@ codium --install-extension "eamodio.gitlens" --force;
 codium --install-extension "oderwat.indent-rainbow" --force; 
 codium --install-extension "isudox.vscode-jetbrains-keybindings" --force; 
 codium --install-extension "ms-python.python" --force; 
-codium --install-extension "liviuschera.noctis" --force; 
 codium --install-extension "svipas.prettier-plus" --force; 
 codium --install-extension "Shan.code-settings-sync" --force; 
 codium --install-extension "TabNine.tabnine-vscode" --force; 
 codium --install-extension "jgclark.vscode-todo-highlight" --force; 
+
+curl https://marketplace.visualstudio.com/_apis/public/gallery/publishers/liviuschera/vsextensions/noctis/10.40.0/vspackage --output liviuschera.noctis.vsix; 
+codium --install-extension liviuschera.noctis.vsix --force;
   
 # Install nerd font
 # https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip
