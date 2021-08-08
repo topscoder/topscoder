@@ -3,7 +3,6 @@
 Semi easter egg 👀
 https://github.com/abhisheknaiidu/awesome-github-profile-readme
 -->
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=topscoder&hide=&layout=compact&theme=dracula" border=0>
 
 Developing in whatever language fits the most. Not speaking all of them though. Mostly Python, PHP, Node.js, C++. I often get a lot of inspiration by the tools, gear and other assets that are used by fellow developers. One of which is probably the most famous: https://wesbos.com/uses. At least it was my first inspiration for creating this profile here on GitHub.
 
@@ -16,6 +15,14 @@ Gear I have around:
 - 🤖 [Google Coral TPU](https://coral.ai/products/)
 - 🤖 [Arduino's, Raspberry Pi's](https://amzn.to/3lAMvs7)
 - 🤖 [Philips Hue Bars](https://amzn.to/2Vso5Go) w/ [Circadian Lighting](https://github.com/claytonjn/hass-circadian_lighting)
+
+<hr>
+
+<table align="center" width="100%" border="0">
+  <tr><td><img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=topscoder&hide=&theme=dracula" border=0></td><td><img align="right" src="https://github-readme-stats.vercel.app/api?username=topscoder&hide=&theme=dracula" border=0></td></tr>
+</table>
+
+<hr>
 
 Apps I'm using:
 
@@ -49,7 +56,6 @@ Inspiration sources I use:
 - 🌟 https://www.webfx.com/tools/emoji-cheat-sheet/
 
 I'm interested in:
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=topscoder&show_icons=true&theme=dracula&hide=stars,issues" border=0>
 
 - 💡 Web Application development
 - 💡 Mobile Application development
