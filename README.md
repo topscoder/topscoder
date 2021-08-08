@@ -16,7 +16,9 @@ Apps I'm using:
 
 - ⚡ [keepingyouawake](https://github.com/newmarcel/KeepingYouAwake) – to keep my Mac awake when I want to.
 - ⚡ Authy – my favourite OTP tool to use for 2FA codes. 👉 It syncs between devices!
+  - 👉   I'm considering Raivo OTP
 - ⚡ Bitwarden – open source password manager. Used 1Password as paying customer until they switched to monthly payments.
+  - 👉  I'm still looking for a neat and safe alternative for Bitwarden. The UI and UX of Bitwarden is far behind 1Password.
 - ⚡ Discord – connecting to other people a.k.a. IRC 2021
 - ⚡ Docker – all things virtual.
 - ⚡ Filezilla - open source FTP, FTPS, SFTP client.
@@ -24,7 +26,7 @@ Apps I'm using:
 - ⚡ Rocket – Easy emoji usage.
 - ⚡ [Rectangle](https://rectangleapp.com) – The missing window manager in macOS.
 - ⚡ Sublime Text – Fast editor I use a lot to open / edit files when I need speed.
-- ⚡ Visual Studio Code – Highly customisable editor. Started very basic, but starts to act like a IDE if you want to.
+- ⚡ [VSCodium](https://vscodium.com) – Highly customisable editor. Started very basic, but starts to act like a IDE if you want to. VSCodium is the privacy friendly port of VSCode.
 
 Other facts:
 
