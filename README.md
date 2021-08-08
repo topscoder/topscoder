@@ -14,7 +14,7 @@ Gear I have around:
 
 Apps I'm using:
 
-- ⚡ Amphetamine – to keep my Mac awake when I want to.
+- ⚡ [keepingyouawake](https://github.com/newmarcel/KeepingYouAwake) – to keep my Mac awake when I want to.
 - ⚡ Authy – my favourite OTP tool to use for 2FA codes. 👉 It syncs between devices!
 - ⚡ Bitwarden – open source password manager. Used 1Password as paying customer until they switched to monthly payments.
 - ⚡ Discord – connecting to other people a.k.a. IRC 2021
