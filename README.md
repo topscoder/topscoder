@@ -84,7 +84,7 @@ All In One Installation
 
 Every few months I cleanup my computer(s) by formatting the entire machine and start with a fresh OS install. In order to install all my fellow apps and tools in a fast and convenient way, I've written a script to do so.
 
-https://raw.githubusercontent.com/topscoder/topscoder/main/macos-fresh-installation.sh
+https://github.com/topscoder/topscoder/blob/main/macos-fresh-installation.sh
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/topscoder/topscoder/main/macos-fresh-installation.sh)"
