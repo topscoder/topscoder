@@ -12,6 +12,24 @@ brew install git docker docker-compose mackup zsh zsh-async zsh-history-substrin
 # Install brew cask packages (cask = gui applications)
 brew install --cask bitwarden commander-one discord keepingyouawake kitty rectangle rocket ubersicht vscodium 
 
+# VSCodium extensions
+# Auto Close Tag
+# Auto Rename Tag
+# Better Comments
+# Bracket Pair Colorizer
+# Diff
+# Emoji Log
+# Fluent Icons
+# Git Lens
+# indent-rainbow
+# Jetbrains IDE Keymap
+# MagicPython
+# Noctis
+# Prettier
+# Settings Sync
+# Tabnine
+# TODO Highlight
+
 # Install nerd font
 # https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip
 
