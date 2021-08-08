@@ -13,23 +13,36 @@ brew install git docker docker-compose mackup zsh zsh-async zsh-history-substrin
 brew install --cask bitwarden commander-one discord eloston-chromium keepingyouawake kitty rectangle rocket ubersicht vscodium 
 
 # VSCodium extensions
-# Auto Close Tag
-# Auto Rename Tag
-# Better Comments
-# Bracket Pair Colorizer
-# Diff
-# Emoji Log
-# Fluent Icons
-# Git Lens
-# indent-rainbow
-# Jetbrains IDE Keymap
-# MagicPython
-# Noctis
-# Prettier
-# Settings Sync
-# Tabnine
-# TODO Highlight
+# https://code.visualstudio.com/docs/editor/command-line
+export code_extensions = "formulahendry.auto-close-tag 
+    formulahendry.auto-rename-tag 
+    aaron-bond.better-comments 
+    CoenraadS.bracket-pair-colorizer	 
+    ryu1kn.partial-diff 
+    ahmadawais.emoji-log-vscode 
+    miguelsolorio.fluent-icons  
+    eamodio.gitlens 
+    oderwat.indent-rainbow 
+    isudox.vscode-jetbrains-keybindings 
+    ms-python.python 
+    liviuschera.noctis 
+    svipas.prettier-plus 
+    Shan.code-settings-sync 
+    TabNine.tabnine-vscode 
+    jgclark.vscode-todo-highlight"
 
+for extension in $code_extensions;
+do
+    codium --install-extension --force $extension;
+done
+
+# Experimental
+codium --install-extension \ 
+  sourcery.sourcery \
+  ponicode.ponicode \
+  CodeStream.codestream \
+  Stepsize.stepsize
+  
 # Install nerd font
 # https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip
 
