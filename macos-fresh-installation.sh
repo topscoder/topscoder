@@ -14,34 +14,22 @@ brew install --cask bitwarden commander-one discord eloston-chromium keepingyoua
 
 # VSCodium extensions
 # https://code.visualstudio.com/docs/editor/command-line
-export code_extensions = "formulahendry.auto-close-tag 
-    formulahendry.auto-rename-tag 
-    aaron-bond.better-comments 
-    CoenraadS.bracket-pair-colorizer	 
-    ryu1kn.partial-diff 
-    ahmadawais.emoji-log-vscode 
-    miguelsolorio.fluent-icons  
-    eamodio.gitlens 
-    oderwat.indent-rainbow 
-    isudox.vscode-jetbrains-keybindings 
-    ms-python.python 
-    liviuschera.noctis 
-    svipas.prettier-plus 
-    Shan.code-settings-sync 
-    TabNine.tabnine-vscode 
-    jgclark.vscode-todo-highlight"
-
-for extension in $code_extensions;
-do
-    codium --install-extension --force $extension;
-done
-
-# Experimental
-codium --install-extension \ 
-  sourcery.sourcery \
-  ponicode.ponicode \
-  CodeStream.codestream \
-  Stepsize.stepsize
+codium --install-extension "formulahendry.auto-close-tag" --force; 
+codium --install-extension "formulahendry.auto-rename-tag" --force; 
+codium --install-extension "aaron-bond.better-comments" --force; 
+codium --install-extension "CoenraadS.bracket-pair-colorizer" --force; 
+codium --install-extension "ryu1kn.partial-diff" --force; 
+codium --install-extension "ahmadawais.emoji-log-vscode" --force; 
+codium --install-extension "miguelsolorio.fluent-icons" --force; 
+codium --install-extension "eamodio.gitlens" --force; 
+codium --install-extension "oderwat.indent-rainbow" --force; 
+codium --install-extension "isudox.vscode-jetbrains-keybindings" --force; 
+codium --install-extension "ms-python.python" --force; 
+codium --install-extension "liviuschera.noctis" --force; 
+codium --install-extension "svipas.prettier-plus" --force; 
+codium --install-extension "Shan.code-settings-sync" --force; 
+codium --install-extension "TabNine.tabnine-vscode" --force; 
+codium --install-extension "jgclark.vscode-todo-highlight" --force; 
   
 # Install nerd font
 # https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip
