@@ -10,7 +10,7 @@ xcode-select --install
 brew install git docker docker-compose mackup zsh zsh-async zsh-history-substring-search
 
 # Install brew cask packages (cask = gui applications)
-brew install --cask bitwarden commander-one discord eloston-chromium keepingyouawake kitty rectangle rocket ubersicht vscodium 
+brew install --cask bitwarden commander-one discord eloston-chromium keepingyouawake kitty rectangle rocket the-unarchiver ubersicht vscodium 
 
 # VSCodium extensions
 # https://code.visualstudio.com/docs/editor/command-line
