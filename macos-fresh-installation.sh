@@ -7,7 +7,7 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install brew packages (default -cli- applications)
-brew install git docker docker-compose mackup zsh zsh-async zsh-history-substring-search
+brew install git docker docker-compose mackup ubersicht zsh zsh-async zsh-history-substring-search
 
 # Install brew cask packages (cask = gui applications)
 brew install --cask bitwarden commander-one discord keepingyouawake kitty rectangle rocket vscodium 
