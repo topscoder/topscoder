@@ -9,7 +9,10 @@
 # System settings
 ./macos.sh
 ./macos-user-defaults.sh
-python3 ./macos-dock.py
+./macos-dock.py
+
+sh .macos
+sh .macos-paulirish
 
 # Application settings
 ./codium.sh
