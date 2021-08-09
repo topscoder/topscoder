@@ -30,6 +30,10 @@ brew install bash-completion@2
 
 # Install homebrew packages (default -cli- applications)
 brew install git
+
+# See: https://github.com/git-friendly/git-friendly
+brew install git-friendly/git-friendly/git-friendly
+
 brew install docker
 brew install docker-compose
 brew install mackup

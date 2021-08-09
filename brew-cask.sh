@@ -15,10 +15,11 @@ brew install --cask keepingyouawake
 brew install --cask kitty
 brew install --cask rectangle
 brew install --cask rocket
-brew install --cask the-unarchiver
+#brew install --cask the-unarchiver
 brew install --cask ubersicht
 brew install --cask vscodium
 brew install --cask appcleaner
+brew install --cask vmware-fusion
 
 # Free Database Management Tool
 #brew install --cask valentina-studio
