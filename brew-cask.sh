@@ -10,6 +10,7 @@ brew upgrade
 brew install --cask bitwarden
 brew install --cask commander-one
 brew install --cask discord
+brew install --cask dropbox
 brew install --cask eloston-chromium
 brew install --cask keepingyouawake
 brew install --cask kitty
