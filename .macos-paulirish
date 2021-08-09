@@ -13,7 +13,7 @@ defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
 
 # git config
 git config --global user.name "topscoder"
-git config --global user.email "topscoder@gmail.com"
+git config --global user.email "86197446+topscoder@users.noreply.github.com"
 
 # autocompletion for git branch names https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
