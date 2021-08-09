@@ -94,7 +94,7 @@ Extensions I like:
 All In One Installation
 ---
 
-Every few months I cleanup my computer(s) by formatting the entire machine and start with a fresh OS install. In order to install all my fellow apps and tools in a fast and convenient way, I've written a script to do so.
+Every few months I [cleanup my computer(s)](https://www.imore.com/how-do-clean-install-macos) by formatting the entire machine and start with a [fresh OS installation](https://www.imore.com/how-do-clean-install-macos). In order to install all my fellow apps and tools in a fast and convenient way, I've written a script to do so.
 
 https://github.com/topscoder/topscoder/blob/main/macos-fresh-installation.sh
 
