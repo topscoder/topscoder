@@ -1,7 +1,35 @@
 #!/bin/bash
 
+# git config
+git config --global user.name "topscoder"
+git config --global user.email "topscoder@gmail.com"
+
+# autocompletion for git branch names https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
+# Type `git open` to open the GitHub page or website for a repository.
+npm install -g git-open
+
+# install better nanorc config
+# https://github.com/scopatz/nanorc
+curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
+# for the c alias (syntax highlighted cat)
+sudo easy_install Pygments
+
+# change to bash 4 (installed by homebrew)
+BASHPATH=$(brew --prefix)/bin/bash
+
+sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
+chsh -s $BASHPATH # will set for current user only.
+echo $BASH_VERSION # should be 4.x not the old 3.2.X
+
+# install nvm (Node Version Nanager, https://github.com/nvm-sh/nvm)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+
 # Remove workspace auto-switching
-defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+sudo defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 killall Dock # Restart the Dock process
 
 # Change the default folder for screenshots
@@ -14,10 +42,10 @@ killall Dock # Restart the Dock process
 # Date & Time
 # ==============================================
 
-/usr/sbin/systemsetup -settimezone "Europe/Amsterdam"
-/usr/sbin/systemsetup -setnetworktimeserver "time.euro.apple.com"
-/usr/sbin/systemsetup -setusingnetworktime on
-/usr/sbin/sysadminctl -automaticTime on
+sudo /usr/sbin/systemsetup -settimezone "Europe/Amsterdam"
+sudo /usr/sbin/systemsetup -setnetworktimeserver "time.euro.apple.com"
+sudo /usr/sbin/systemsetup -setusingnetworktime on
+sudo /usr/sbin/sysadminctl -automaticTime on
 
 
 # ==============================================
@@ -27,10 +55,10 @@ killall Dock # Restart the Dock process
 # From <https://github.com/rtrouton/rtrouton_scripts/>
 IS_LAPTOP=$(/usr/sbin/system_profiler SPHardwareDataType | grep "Model Identifier" | grep "Book")
 if [[ "$IS_LAPTOP" != "" ]]; then
-    pmset -b sleep 15 disksleep 10 displaysleep 5 halfdim 1
-    pmset -c sleep 0 disksleep 0 displaysleep 30 halfdim 1
+    sudo pmset -b sleep 15 disksleep 10 displaysleep 5 halfdim 1
+    sudo pmset -c sleep 0 disksleep 0 displaysleep 30 halfdim 1
 else
-    pmset sleep 0 disksleep 0 displaysleep 30 halfdim 1
+    sudo pmset sleep 0 disksleep 0 displaysleep 30 halfdim 1
 fi
 
 
@@ -39,16 +67,16 @@ fi
 # ==============================================
 
 # Enable ALF
-defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
 # Allow signed apps
-defaults write /Library/Preferences/com.apple.alf allowsignedenabled -bool true
+sudo defaults write /Library/Preferences/com.apple.alf allowsignedenabled -bool true
 
 # Enable logging
-defaults write /Library/Preferences/com.apple.alf loggingenabled -bool true
+sudo defaults write /Library/Preferences/com.apple.alf loggingenabled -bool true
 
 # Disable stealth mode
-defaults write /Library/Preferences/com.apple.alf stealthenabled -bool false
+sudo defaults write /Library/Preferences/com.apple.alf stealthenabled -bool false
 
 
 # ==============================================
@@ -56,28 +84,28 @@ defaults write /Library/Preferences/com.apple.alf stealthenabled -bool false
 # ==============================================
 
 # Display login window as: Name and password
-defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool true
+sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool true
 
 # Show shut down etc. buttons
-defaults write /Library/Preferences/com.apple.loginwindow PowerOffDisabled -bool false
+sudo defaults write /Library/Preferences/com.apple.loginwindow PowerOffDisabled -bool false
 
 # Don't show any password hints
-defaults write /Library/Preferences/com.apple.loginwindow RetriesUntilHint -int 0
+sudo defaults write /Library/Preferences/com.apple.loginwindow RetriesUntilHint -int 0
 
 # Allow fast user switching
-defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool true
+sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool true
 
 # Hide users with UID under 500
-defaults write /Library/Preferences/com.apple.loginwindow Hide500Users -bool true
+sudo defaults write /Library/Preferences/com.apple.loginwindow Hide500Users -bool true
 
 # Show input menu
-defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
+sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Disable screensaver on login window
-defaults write /Library/Preferences/com.apple.screensaver loginWindowIdleTime -int 0
+sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowIdleTime -int 0
 
 # Disable automatic login
-defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser > /dev/null 2>&1
+sudo defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser > /dev/null 2>&1
 
 
 # ==============================================
@@ -85,27 +113,27 @@ defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser > /dev/
 # ==============================================
 
 # Enable automatic update check and download
-defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
-defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool true
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool true
 
 # Enable app update installs
-defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
+sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
 
 # Enable system data files and security update installs
-defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall -bool true
-defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall -bool true
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
 
 # Enable OS X update installs
-defaults write /Library/Preferences/com.apple.commerce AutoUpdateRestartRequired -bool true
+sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdateRestartRequired -bool true
 
 # Enable key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool FALSE
+sudo defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool FALSE
 
 # Set keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 2
+sudo defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Set scroll direction
-defaults write /Library/Preferences/.GlobalPreferences com.apple.swipescrolldirection -bool false
+sudo defaults write /Library/Preferences/.GlobalPreferences com.apple.swipescrolldirection -bool false
 
 
 # ==============================================
@@ -113,15 +141,15 @@ defaults write /Library/Preferences/.GlobalPreferences com.apple.swipescrolldire
 # ==============================================
 
 # Don't offer new disks for backup
-defaults write /Library/Preferences/com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+sudo defaults write /Library/Preferences/com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 
 # ==============================================
 # Guest access off
 # ==============================================
-/usr/sbin/sysadminctl -guestAccount off
-/usr/sbin/sysadminctl -afpGuestAccess off
-/usr/sbin/sysadminctl -smbGuestAccess off
+sudo /usr/sbin/sysadminctl -guestAccount off
+sudo /usr/sbin/sysadminctl -afpGuestAccess off
+sudo /usr/sbin/sysadminctl -smbGuestAccess off
 
 echo 
 echo "Done running macos.sh. Note that these changes require a restart to take effect."

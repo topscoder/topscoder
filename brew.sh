@@ -21,12 +21,17 @@ brew install vim
 brew install nano
 brew install grep
 brew install openssh
+brew install wget
 
 # better `top`
 brew install glances
 
 # See: https://sourabhbajaj.com/mac-setup/BashCompletion/
 brew install bash-completion@2
+
+# Add the following line to your ~/.bash_profile:
+# FIXME only if not already installed
+echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile
 
 # Install homebrew packages (default -cli- applications)
 brew install git
@@ -39,7 +44,6 @@ brew install docker-compose
 brew install mackup
 brew install zsh
 brew install zsh-async
-brew install zsh-history-substring-search
 
 # Remove outdated versions from the cellar
 brew cleanup

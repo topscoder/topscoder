@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-setup-dock.py
+macos-dock.py
 
 This script configures the Dock content the
 way I like it. Use with caution...
@@ -39,7 +39,7 @@ appleAppsWithVaryingNames = [
     {
         "path": "/Applications/kitty.app",
         "args": [ "--before", "Activity Monitor" ]
-    }
+    },
     {
         "path": "/Applications/iCal.app",
         "args": [ "--after", "Mail" ]
@@ -58,7 +58,7 @@ appleAppsWithVaryingNames = [
 thirdPartyApps = [
     {
         "path": "/Applications/Chromium.app",
-        "args": ["--after", "Mail"]
+        "args": ["--after", "Mail"],
         "forced": False
     },
     {
@@ -75,6 +75,7 @@ thirdPartyApps = [
         "path": "/Applications/Commander One.app",
         "args": [ "--before", "kitty" ],
         "forced": False,
+    },
     {
         "path": "/Applications/Discord.app",
         "args": [ "--after", "Mail" ],

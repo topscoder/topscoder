@@ -18,7 +18,7 @@ codium --install-extension "svipas.prettier-plus" --force;
 codium --install-extension "Shan.code-settings-sync" --force;
 codium --install-extension "TabNine.tabnine-vscode" --force;
 codium --install-extension "jgclark.vscode-todo-highlight" --force;
-codium --install-extensino "rangav.vscode-thunder-client" --force;
+codium --install-extension "rangav.vscode-thunder-client" --force;
 
 curl https://marketplace.visualstudio.com/_apis/public/gallery/publishers/liviuschera/vsextensions/noctis/10.40.0/vspackage --output liviuschera.noctis.vsix;
 codium --install-extension liviuschera.noctis.vsix --force;

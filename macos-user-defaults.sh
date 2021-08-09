@@ -357,7 +357,7 @@ CFPreferencesAppSynchronize "com.apple.finder"
 echo "Setting Dock preferences"
 
 # Position (left, bottom, right)
-defaults write com.apple.dock orientation -string "left"
+defaults write com.apple.dock orientation -string "bottom"
 
 CFPreferencesAppSynchronize "com.apple.dock"
 
