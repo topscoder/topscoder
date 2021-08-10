@@ -40,6 +40,7 @@ brew "git-friendly/git-friendly/git-friendly"
 # Just some useful apps
 brew "docker-compose"
 brew "docker"
+brew "dockutil"
 brew "mackup"
 brew "zsh-async"
 brew "zsh"
