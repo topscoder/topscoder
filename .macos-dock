@@ -12,10 +12,12 @@ system_applications=(
     "/System/Applications/Launchpad.app" 
     "/System/Applications/Home.app" 
     "/System/Applications/Messages.app"
+    "/Applications/Discord.app" 
     "/Applications/Chromium.app" 
     "/Applications/VSCodium.app" 
     "/Applications/Bitwarden.app"
     "/Applications/Commander One.app"
+    "/Applications/VMWware Fusion.app"
     "/Applications/kitty.app"
 )
 
