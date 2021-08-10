@@ -1,31 +1,9 @@
 #!/bin/bash
 
+source ./utils.sh
+
 # Install XCode Developer Tools
 #      thx https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
-
-print_in_green() {
-    printf "\e[0;32m$1\e[0m"
-}
-
-print_success() {
-    print_in_green "  [✔] $1\n"
-}
-
-print_error() {
-    print_in_red "  [✖] $1 $2\n"
-}
-
-print_in_red() {
-    printf "\e[0;31m$1\e[0m"
-}
-
-print_result() {
-    [ $1 -eq 0 ] \
-        && print_success "$2" \
-        || print_error "$2"
-
-    return $1
-}
 
 if ! xcode-select --print-path &> /dev/null; then
 
@@ -61,28 +39,30 @@ if ! xcode-select --print-path &> /dev/null; then
 fi
 ##############################################################################################################
 
+# Ask for the administrator password upfront
+sudo -v
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Make sure everythin is working properly
 brew doctor
 
-# FIXME only clone if .dotfiles are not installed already
-# [[ $(pwd) =~ ^C] && echo ${BASH_REMATCH[0]}
-
-brew install git
-
-git clone https://github.com/topscoder/topscoder.git ./.dotfiles/
-
-cd .dotfiles/
+# Only clone if .dotfiles are not installed already
+if ! [[ $(pwd) =~ (\.dotfiles$) ]];
+then
+    brew install git
+    git clone https://github.com/topscoder/topscoder.git ./.dotfiles/
+    cd .dotfiles/
+fi
 
 # Install and upgrade (by default) all dependencies from the Brewfile (.brewfile).
 brew bundle --file=.brewfile
 
+# Unlock quarantaine mode for apps
 sh .macos-unlocker
 
 # Install Irvue wallpaper manager from App Store
-# 1039633667  Irvue
 mas install 1039633667
 
 # FIXME
