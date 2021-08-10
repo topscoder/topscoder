@@ -67,6 +67,9 @@ fi
 # Make sure everythin is working properly
 brew doctor
 
+# FIXME only clone if .dotfiles are not installed already
+# [[ $(pwd) =~ ^C] && echo ${BASH_REMATCH[0]}
+
 brew install git
 
 git clone https://github.com/topscoder/topscoder.git ./.dotfiles/
@@ -76,10 +79,11 @@ cd .dotfiles/
 # Install and upgrade (by default) all dependencies from the Brewfile (.brewfile).
 brew bundle --file=.brewfile
 
+sh .macos-unlocker
+
 # Install Irvue wallpaper manager from App Store
 # 1039633667  Irvue
 mas install 1039633667
-
 
 # FIXME
 #./oh-my-zsh.sh
