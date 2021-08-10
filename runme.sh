@@ -69,9 +69,9 @@ brew doctor
 
 brew install git
 
-git clone https://github.com/topscoder/topscoder.git .dotfiles
+git clone https://github.com/topscoder/topscoder.git ./dotfiles/
 
-cd .dotfiles
+cd .dotfiles/
 
 # Install and upgrade (by default) all dependencies from the Brewfile (.brewfile).
 brew bundle --file=.brewfile
