@@ -76,6 +76,10 @@ cd .dotfiles/
 # Install and upgrade (by default) all dependencies from the Brewfile (.brewfile).
 brew bundle --file=.brewfile
 
+# Install Unsplash Wallpaper app from App Store
+# 1284863847  Unsplash Wallpapers            (1.4.4)
+mas install 1284863847
+
 # FIXME
 #./oh-my-zsh.sh
 
