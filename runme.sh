@@ -69,7 +69,7 @@ brew doctor
 
 brew install git
 
-git clone https://github.com/topscoder/dotfiles.git .dotfiles
+git clone https://github.com/topscoder/topscoder.git .dotfiles
 
 cd .dotfiles
 
