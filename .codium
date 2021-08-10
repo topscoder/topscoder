@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # VSCodium extensions
 # https://code.visualstudio.com/docs/editor/command-line
 codium --install-extension "formulahendry.auto-close-tag" --force;

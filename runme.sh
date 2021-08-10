@@ -1,9 +1,6 @@
-#!/bin/sh
-
+#!/bin/bash
 
 # Install XCode Developer Tools
-##############################################################################################################
-### XCode Command Line Tools
 #      thx https://github.com/alrra/dotfiles/blob/ff123ca9b9b/os/os_x/installs/install_xcode.sh
 
 if ! xcode-select --print-path &> /dev/null; then
@@ -46,28 +43,26 @@ fi
 # Make sure everythin is working properly
 brew doctor
 
-# Shell prompt
-# npm install -g typewritten
+# Install and upgrade (by default) all dependencies from the Brewfile.
+brew bundle
 
-# noctis color scheme for:
-# - kitty terminal
-# - vscodium
-# - typewritten
-# - zsh?
+# FIXME
+#./oh-my-zsh.sh
 
-# Set zsh plugins
-# plugins=(
-#   git
-#   bundler
-#   dotenv
-#   osx
-#   rake
-#   rbenv
-#   ruby
-# )
+# System settings
+sh .macos
+sh .macos-user-defaults
+sh .macos-paulirish
+python .macos-dock
 
-# Set zsh theme
-# https://github.com/ohmyzsh/ohmyzsh
+# Application specific settings
+sh .codium
 
-# Restore settings using mackup sync
-# mackup restore
+# Done
+echo
+echo "-- Installation done --"
+echo
+echo "Don't forget to use `mackup restore`"
+echo
+echo "-- KTHXBAI --"
+echo
