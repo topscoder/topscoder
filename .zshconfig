@@ -1,0 +1,19 @@
+#!/bin/bash
+
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s $(which zsh)
+
+# plugins=(
+#   git
+#   bundler
+#   dotenv
+#   osx
+#   rake
+#   rbenv
+#   ruby
+# )
+
+npm install -g typewritten
+
+# then reload zsh
+exec zsh
