@@ -98,10 +98,10 @@ All In One Installation
 
 Every few months I [cleanup my computer(s)](https://www.imore.com/how-do-clean-install-macos) by formatting the entire machine and start with a [fresh OS installation](https://www.imore.com/how-do-clean-install-macos). In order to install all my fellow apps and tools in a fast and convenient way, I've written a script to do so.
 
-https://github.com/topscoder/topscoder/blob/main/macos-fresh-installation.sh
+https://github.com/topscoder/topscoder/blob/main/runme.sh
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/topscoder/topscoder/main/macos-fresh-installation.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/topscoder/topscoder/main/runme.sh)"
 ```
 
 <!--
