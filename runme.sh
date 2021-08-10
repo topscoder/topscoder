@@ -83,7 +83,7 @@ brew bundle --file=.brewfile
 sh .macos
 sh .macos-user-defaults
 sh .macos-paulirish
-python .macos-dock
+python3 .macos-dock
 
 # Application specific settings
 sh .codium
