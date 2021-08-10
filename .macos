@@ -2,12 +2,12 @@
 
 # Based on https://mths.be/macos
 
+# Ask for the administrator password upfront
+sudo -v
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
-
-# Ask for the administrator password upfront
-sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -16,7 +16,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo nvram SystemAudioVolume=" "
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+sudo defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Menu bar: hide the Time Machine, Volume, and User icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
@@ -25,61 +25,94 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/User.menu"
 done
-defaults write com.apple.systemuiserver menuExtras -array \
+sudo defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
 	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Set highlight color to pink
-defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.252792 1.000000"
+sudo defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.252792 1.000000"
 
 # Expand print panel by default
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+sudo defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+sudo defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+sudo defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+sudo defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+sudo defaults delete com.apple.LaunchServices LSQuarantine
+sudo defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 # Disable Resume system-wide
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+sudo defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 # Edit: ALLOW automatic termination of inactive apps
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool false
+sudo defaults write NSGlobalDomain NSDisableAutomaticTermination -bool false
 
 # Set Help Viewer windows to non-floating mode
-defaults write com.apple.helpviewer DevMode -bool true
+sudo defaults write com.apple.helpviewer DevMode -bool true
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+sudo defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+sudo defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
-# all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
-#rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-#sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-#sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
+# Turn off notification bubble for System Preferences
+sudo defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+
+# Fix Home/End on full-size keyboards
+mkdir -p ~/Library/KeyBindings/
+
+cat > ~/Library/KeyBindings/DefaultKeyBinding.dict<< EOF
+{
+    "\UF729"  = "moveToBeginningOfLine:";                   /* Home */
+    "\UF72B"  = "moveToEndOfLine:";                         /* End  */
+    "$\UF729" = "moveToBeginningOfLineAndModifySelection:"; /* Shift + Home */
+    "$\UF72B" = "moveToEndOfLineAndModifySelection:";       /* Shift + End  */
+    /* Stop Mac from beeping when pressing Ctrl+Cmd+Down */
+    /* https://github.com/atom/atom/issues/1669#issuecomment-135503562 */
+    "^@\UF701" = "noop:";
+    "^@\UF702" = "noop:";
+    "^@\UF703" = "noop:";
+}
+EOF
+
+# NSUserKeyEquivalents
+# @    Command (Apple)  CMD
+# ~    Option           OPT
+# $    Shift            SHIFT
+# ^    Control          CTRL
+
+# Reload quickLook plugins
+qlmanage -r
+qlmanage -r cache
+
+## Backspace to go up, delete key to move files to trash
+sudo defaults write com.apple.finder NSUserKeyEquivalents -dict-add 'Back' '\U232B'
+sudo defaults write com.apple.finder NSUserKeyEquivalents -dict-add 'Move to Trash' '\U007F'
+
+## WARNING: DELETE KEY WILL NOW DELETE FILES AND FOLDERS IF YOU ARE ATTEMPTING TO RENAME THEM!! USE BACKSPACE!
+sudo defaults read com.apple.finder NSUserKeyEquivalents
+
 
 # ==============================================
 # Date & Time
@@ -194,6 +227,8 @@ sudo /usr/sbin/sysadminctl -guestAccount off
 sudo /usr/sbin/sysadminctl -afpGuestAccess off
 sudo /usr/sbin/sysadminctl -smbGuestAccess off
 
+echo
 echo 
-echo "Done running macos.sh. Note that these changes require a restart to take effect."
+echo " 👉👉👉 Done running .macos. Note that these changes require a restart to take effect."
+echo
 echo

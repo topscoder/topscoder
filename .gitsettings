@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# git config
+git config --global user.name "topscoder"
+git config --global user.email "86197446+topscoder@users.noreply.github.com"

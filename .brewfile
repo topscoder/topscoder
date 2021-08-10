@@ -75,6 +75,8 @@ cask "quicklook-csv"
 cask "quicklook-json"
 cask "suspicious-package"
 cask "webpquicklook"
+cask "qlimagesize"
+cask "quicknfo"
 
 # Fonts
 tap "homebrew/cask-fonts"

@@ -16,7 +16,8 @@ codium --install-extension "TabNine.tabnine-vscode" --force;
 
 echo
 echo
-echo " ==> PLEASE INSTALL THESE EXTENSIONS MANUALLY: "
+echo " 👉👉👉 PLEASE INSTALL THESE EXTENSIONS MANUALLY: "
+echo " 👉👉👉 AS LONG AS THESE EXTENSIONS ARE NOT PUBLISHED TO OPEN VXS "
 echo 
 echo "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
 echo "https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff"
@@ -24,7 +25,5 @@ echo "https://marketplace.visualstudio.com/items?itemName=jgclark.vscode-todo-hi
 echo "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
 echo
 echo "https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis"
-echo
-echo " ==> AS LONG AS THESE EXTENSIONS ARE NOT PUBLISHED TO OPEN VXS "
 echo
 echo

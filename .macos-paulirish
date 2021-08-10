@@ -10,11 +10,6 @@
 # Always display full control strip (ignoring App Controls)
 defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
 
-
-# git config
-git config --global user.name "topscoder"
-git config --global user.email "86197446+topscoder@users.noreply.github.com"
-
 # autocompletion for git branch names https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
@@ -25,28 +20,12 @@ npm install -g git-open
 # https://github.com/scopatz/nanorc
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 
-# for the c alias (syntax highlighted cat)
-sudo easy_install Pygments
-
-# change to bash 4 (installed by homebrew)
-BASHPATH=$(brew --prefix)/bin/bash
-
-sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
-chsh -s $BASHPATH # will set for current user only.
-echo $BASH_VERSION # should be 4.x not the old 3.2.X
-
-# install nvm (Node Version Nanager, https://github.com/nvm-sh/nvm)
+# Install nvm (Node Version Nanager, https://github.com/nvm-sh/nvm)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-
 
 # Remove workspace auto-switching
 sudo defaults write com.apple.dock workspaces-auto-swoosh -bool NO
-killall Dock # Restart the Dock process
 
-# Change the default folder for screenshots
-# Open the terminal and create the folder where you would like to store your screenshots:
-# mkdir -p /path/to/screenshots/
-# defaults write com.apple.screencapture location /path/to/screenshots/ && killall SystemUIServer
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
@@ -59,9 +38,11 @@ sudo tmutil disablelocal
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
+sudo rm -f /private/var/vm/sleepimage
+
 # Create a zero-byte file instead…
 sudo touch /private/var/vm/sleepimage
+
 # …and make sure it can’t be rewritten
 sudo chflags uchg /private/var/vm/sleepimage
 
@@ -107,8 +88,10 @@ sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool false
+
 # Zoom should use nearest neighbor instead of smoothing.
 defaults write com.apple.universalaccess 'closeViewSmoothImages' -bool false
 
@@ -135,7 +118,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
-
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
@@ -187,7 +169,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # I dont want the drag n drop happening SUPERFAST. https://discussions.apple.com/thread/7160895
-defaults write NSGlobalDomain com.apple.springing.delay -float 2
+defaults write NSGlobalDomain com.apple.springing.delay -float 1.5
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -305,6 +287,7 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
+
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 
@@ -319,9 +302,6 @@ defaults write com.apple.dock showhidden -bool false
 
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
-
-# Add iOS Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app" "/Applications/iOS Simulator.app"
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
@@ -343,8 +323,10 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulat
 
 
 # Top left screen corner → Put to sleep
-defaults write com.apple.dock wvous-tl-corner -int 10
-defaults write com.apple.dock wvous-tl-modifier -int 0
+#defaults write com.apple.dock wvous-tl-corner -int 10
+#defaults write com.apple.dock wvous-tl-modifier -int 0
+defaults write com.apple.dock wvous-tl-corner -int 1
+defaults write com.apple.dock wvous-tr-modifier -int 1048576
 # Top right screen corner → no-op
 defaults write com.apple.dock wvous-tr-corner -int 1
 defaults write com.apple.dock wvous-tr-modifier -int 1048576
@@ -519,10 +501,6 @@ tell application "Terminal"
 end tell
 EOD
 
-# Enable “focus follows mouse” for Terminal.app and all X11 apps
-# i.e. hover over a window and start typing in it without clicking first
-#defaults write com.apple.terminal FocusFollowsMouse -bool true
-#defaults write org.x.X11 wm_ffm -bool true
 
 # Enable Secure Keyboard Entry in Terminal.app
 # See: https://security.stackexchange.com/a/47786/8918
@@ -663,20 +641,6 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
-
-###############################################################################
-# GPGMail 2                                                                   #
-###############################################################################
-
-# Disable signing emails by default
-defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
-
-###############################################################################
-# Tweetbot.app                                                                #
-###############################################################################
-
-# Bypass the annoyingly slow t.co URL shortener
-defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
