@@ -1,5 +1,10 @@
 # NOTES
 
+- [ ] Alfred Workflows 
+    - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/BugNot
+    - [ ] https://github.com/blacs30/bitwarden-alfred-workflow
+    - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/RunCommand
+    - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/StrongPassword
 - [ ] What about ssh keys for private servers and github?
 - [ ] Link wallpaper from $HOMEDIR/Afbeeldingen/wallpaper.jpg to Dropbox
 - [ ] Implement `npm install -g typewritten`
