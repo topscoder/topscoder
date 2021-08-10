@@ -43,8 +43,8 @@ fi
 # Make sure everythin is working properly
 brew doctor
 
-# Install and upgrade (by default) all dependencies from the Brewfile.
-brew bundle
+# Install and upgrade (by default) all dependencies from the Brewfile (.brewfile).
+brew bundle --file=.brewfile
 
 # FIXME
 #./oh-my-zsh.sh
