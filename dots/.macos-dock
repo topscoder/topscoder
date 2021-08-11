@@ -2,7 +2,8 @@
 
 source utils.sh
 
-# TODO: Make adding dividers possible
+# Ask for the administrator password upfront
+sudo --validate
 
 start_block "Running .macos-dock"
 
@@ -21,48 +22,35 @@ system_applications=(
     "/Applications/VSCodium.app" 
     "/Applications/Bitwarden.app"
     "/Applications/Commander One.app"
-    "/Applications/VMWware Fusion.app"
+    "/Applications/VMware Fusion.app"
     "/Applications/kitty.app"
 )
 
 # Clear entire dock
 dockutil --remove all
 
-last_app=""
 pos=0
 
 for n in ${!system_applications[@]}; do
     ((pos++))
 
-    # Add spacer if requested
-    if [ "${system_applications[$n]}" = "" ];
-    then
-        dockutil --add '' --type spacer --no-restart --section apps --after "$last_app" "$TARGET_HOMEDIR/"
-        continue
-    fi
+    str=${system_applications[$n]}
 
     # Check if .app exists
     if [ ! -d "${system_applications[$n]}" ];
     then
         echo
-        echo " X X X WARNING: App ${system_applications[$n]} does not exist."
-        log_info "App ${system_applications[$n]} does not exist."
+        echo " WARNING: App $str does not exist."
+        log_info "App $str does not exist."
         echo
         
         ((pos--))
         continue
     fi
 
-    dockutil --add "${system_applications[$n]}/" --no-restart --position $pos "$TARGET_HOMEDIR/"
+    echo "dockutil --add \"$str\" --allhomes"
 
-    # Store last app as variable to be able to use it as '--after App'
-    str=${system_applications[$n]}
-    if [[ $str =~ .*\/(.*)\.app\/?$ ]]; then
-        last_app=${BASH_REMATCH[1]}
-    fi
+    /bin/bash -c "dockutil --add \"$str\" --allhomes"
 done
-
-# Restart the Dock once to apply changes
-killall Dock
 
 finish_block ".macos-dock"

@@ -30,24 +30,24 @@ then
 fi
 
 # Install ZSH shell
-sh .app-zsh
+sh ./dots/.app-zsh
 
 # Unlock quarantaine mode for apps
-sh .macos-unlocker
+sh ./dots/.macos-unlocker
 
 # Install Homebrew
-sh .app-homebrew
+sh ./dots/.app-homebrew
 
 
 # Install and upgrade (by default) cli-tools, apps from the Brewfile (.brewfile).
-brew bundle --file=.brewfile
+brew bundle --file=./dots/.brewfile
 
 # Install Irvue wallpaper manager from App Store
 mas install 1039633667
 
 
 # Git configuration
-sh .conf-git
+sh ./dots/.conf-git
 
 # macOS configuration
 conf_mac=(
@@ -59,7 +59,7 @@ conf_mac=(
 for cfile in "${conf_mac[@]}"; 
 do
     # if ask "$cmd" Y; then
-    cmd="sh $cfile"
+    cmd="sh ./dots/$cfile"
     /bin/bash -c "$cmd"
     # fi
 done
@@ -74,7 +74,7 @@ apps=(
 
 for afile in "${apps[@]}"; 
 do
-    cmd="sh $afile"
+    cmd="sh ./dots/$afile"
     /bin/bash -c "$cmd"
 done
 
