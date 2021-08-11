@@ -1,0 +1,43 @@
+#!/bin/bash
+
+source utils.sh
+
+echo 
+log_info " 👉👉👉 VSCodium extensions (.app-vscodium)"
+echo " 👉👉👉 VSCodium extensions (.app-vscodium)"
+
+# VSCodium extensions
+# https://code.visualstudio.com/docs/editor/command-line
+
+codium_ext=(
+    "formulahendry.auto-close-tag" 
+    "aaron-bond.better-comments" 
+    "CoenraadS.bracket-pair-colorizer" 
+    "ahmadawais.emoji-log-vscode" 
+    "miguelsolorio.fluent-icons" 
+    "eamodio.gitlens" 
+    "oderwat.indent-rainbow" 
+    "k--kato.intellij-idea-keybindings" 
+    "ms-python.python" 
+    "Shan.code-settings-sync" 
+    "TabNine.tabnine-vscode")
+
+for cext in "${codium_ext[@]}"; 
+do
+    cmd="codium --install-extension \"$cext\" --force;"
+    echo "installing $cext"
+    bash -c $cmd
+done
+
+log_note "PLEASE INSTALL THESE EXTENSIONS MANUALLY: "
+log_note "AS LONG AS THESE EXTENSIONS ARE NOT PUBLISHED TO OPEN VXS "
+log_note " "
+log_note "- https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
+log_note "- https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff"
+log_note "- https://marketplace.visualstudio.com/items?itemName=jgclark.vscode-todo-highlight"
+log_note "- https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
+log_note "- https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis"
+log_note " "
+
+echo " ✅  Done "
+echo 
