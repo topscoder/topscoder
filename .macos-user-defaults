@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source utils.sh
+
 # ==============================================
 # .macos-user-defaults
 #
@@ -33,7 +35,7 @@ fi
 # ==============================================
 # NSGlobalDomain settings
 # ==============================================
-echo "Setting NSGlobalDomain preferences"
+log_info "Setting NSGlobalDomain preferences"
 
 # Locale
 defaults write NSGlobalDomain AppleLocale -string "nl_NL"
@@ -107,7 +109,7 @@ defaults write NSGlobalDomain userMenuExtraStyle -int 2
 # ==============================================
 # Desktop & Screen Saver
 # ==============================================
-echo "Setting Desktop & Screen Saver preferences"
+log_info "Setting Desktop & Screen Saver preferences"
 
 # No translucent menu bar
 defaults write NSGlobalDomain "AppleEnableMenuBarTransparency" -bool false
@@ -127,7 +129,7 @@ defaults write com.apple.dock "wvous-bl-modifier" -int 0
 # ==============================================
 # Mouse and trackpad
 # ==============================================
-echo "Setting Mouse and Trackpad preferences"
+log_info "Setting Mouse and Trackpad preferences"
 
 # Set scroll direction
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
@@ -139,7 +141,7 @@ defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
 # ==============================================
 # Activity Monitor
 # ==============================================
-echo "Setting Activity Monitor preferences"
+log_info "Setting Activity Monitor preferences"
 
 # Show main window on launch
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -188,7 +190,7 @@ CFPreferencesAppSynchronize "com.apple.ActivityMonitor"
 # ==============================================
 # Contacts (Address Book)
 # ==============================================
-echo "Setting Contacts preferences"
+log_info "Setting Contacts preferences"
 
 # Address format
 defaults write com.apple.AddressBook ABDefaultAddressCountryCode -string "fi"
@@ -208,7 +210,7 @@ CFPreferencesAppSynchronize "com.apple.AddressBook"
 # ==============================================
 # Calendar (iCal)
 # ==============================================
-echo "Setting Calendar preferences"
+log_info "Setting Calendar preferences"
 
 # Show week numbers
 defaults write com.apple.iCal "Show Week Numbers" -bool true
@@ -237,7 +239,7 @@ CFPreferencesAppSynchronize "com.apple.iCal"
 # ==============================================
 # Mail
 # ==============================================
-echo "Setting Mail preferences"
+log_info "Setting Mail preferences"
 
 # Mark all messages as read when opening a conversation
 defaults write com.apple.mail ConversationViewMarkAllAsRead -bool true
@@ -248,7 +250,7 @@ CFPreferencesAppSynchronize "com.apple.mail"
 # ==============================================
 # Disable CD & DVD actions
 # ==============================================
-echo "Setting CD & DVD preferences"
+log_info "Setting CD & DVD preferences"
 
 # Disable blank CD automatic action.
 defaults write com.apple.digihub com.apple.digihub.blank.cd.appeared -dict action 1
@@ -269,7 +271,7 @@ defaults write com.apple.digihub com.apple.digihub.dvd.video.appeared -dict acti
 # ==============================================
 # Archive Utility
 # ==============================================
-echo "Setting Archive Utility preferences"
+log_info "Setting Archive Utility preferences"
 
 # Move archives to trash after extraction
 defaults write com.apple.archiveutility "dearchive-move-after" -string "~/.Trash"
@@ -283,7 +285,7 @@ CFPreferencesAppSynchronize "com.apple.archiveutility"
 # ==============================================
 # Xcode
 # ==============================================
-echo "Setting Xcode preferences"
+log_info "Setting Xcode preferences"
 
 # Always use spaces for indenting
 defaults write com.apple.dt.Xcode DVTTextIndentUsingTabs -bool false
@@ -297,7 +299,7 @@ CFPreferencesAppSynchronize "com.apple.dt.Xcode"
 # ==============================================
 # VMware Fusion
 # ==============================================
-echo "Setting VMware Fusion preferences"
+log_info "Setting VMware Fusion preferences"
 
 # Applications menu: Show in Menu Bar: Never
 defaults write com.vmware.fusion showStartMenu3 -int 0
@@ -311,7 +313,7 @@ CFPreferencesAppSynchronize "com.vmware.fusion"
 # ==============================================
 # Finder
 # ==============================================
-echo "Setting Finder preferences"
+log_info "Setting Finder preferences"
 
 # Expand the "Open with" and "Sharing & Permissions" panes
 defaults write com.apple.finder FXInfoPanesExpanded -dict OpenWith -bool true Privileges -bool true
@@ -355,7 +357,7 @@ CFPreferencesAppSynchronize "com.apple.finder"
 # ==============================================
 # Dock
 # ==============================================
-echo "Setting Dock preferences"
+log_info "Setting Dock preferences"
 
 # Position (left, bottom, right)
 defaults write com.apple.dock orientation -string "bottom"
@@ -366,7 +368,7 @@ CFPreferencesAppSynchronize "com.apple.dock"
 # ==============================================
 # Safari & WebKit
 # ==============================================
-echo "Setting Safari & WebKit preferences"
+log_info "Setting Safari & WebKit preferences"
 
 # Appearance
 
@@ -517,7 +519,7 @@ CFPreferencesAppSynchronize "com.apple.Safari"
 # ==============================================
 # Disk Utility
 # ==============================================
-echo "Setting Disk Utility preferences"
+log_info "Setting Disk Utility preferences"
 
 # Enable the debug menu in Disk Utility
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
@@ -532,7 +534,7 @@ CFPreferencesAppSynchronize "com.apple.DiskUtility"
 # ==============================================
 # Terminal
 # ==============================================
-echo "Setting Terminal preferences"
+log_info "Setting Terminal preferences"
 
 # ----------------------------------------------
 # Create a new "Basic Improved" profile

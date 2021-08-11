@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source utils.sh
+
 # Based on https://mths.be/macos
 
 # Ask for the administrator password upfront
@@ -232,3 +234,5 @@ echo
 echo " 👉👉👉 Done running .macos. Note that these changes require a restart to take effect."
 echo
 echo
+
+log_info "Done running .macos"

@@ -6,7 +6,8 @@
     - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/StrongPassword
     - [x] https://github.com/blacs30/bitwarden-alfred-workflow
 - [ ] What about ssh keys for private servers and github?
-- [ ] Implement `npm install -g typewritten`
+- [x] Implement `npm install -g typewritten`
+- [ ] Configure Dropbox to use my account so mackup can do it's job
 - [x] Link wallpaper from $HOMEDIR/Afbeeldingen/wallpaper.jpg to Dropbox
 - [x] Security; open apps and allow anyway command
 - [x] Fix issue
@@ -15,10 +16,10 @@ Failed Installing Extensions: file:///Users/denver/Projects/topscoder/liviuscher
 
 - [ ] Noctis color scheme for:
     - [ ] kitty terminal
-    - [x] vscodium
     - [ ] typewritten
     - [ ] zsh?
     - [ ] cask "spark"
+    - [x] vscodium
 
 - [ ] Set zsh plugins
     plugins=(

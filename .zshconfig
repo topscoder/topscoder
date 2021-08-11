@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source utils.sh
+
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh)
 
@@ -16,4 +18,6 @@ chsh -s $(which zsh)
 npm install -g typewritten
 
 # then reload zsh
-exec zsh
+# exec zsh
+
+log_info "Done installing zsh shell."

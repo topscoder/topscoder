@@ -38,6 +38,18 @@ fi
 ##############################################################################################################
 
 
+log_note() {
+    echo "`date` - $1" >> notes.log
+}
+
+log_info() {
+    echo "`date` - $1" >> runme.log
+}
+
+clear_logs() {
+    echo "" > notes.log
+    echo "" > runme.log
+}
 
 print_in_green() {
     printf "\e[0;32m$1\e[0m"

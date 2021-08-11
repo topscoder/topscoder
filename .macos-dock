@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source utils.sh
+
 # TODO: Make adding dividers possible
 
 # Defaults to your current home directory.
@@ -42,7 +44,9 @@ for n in ${!system_applications[@]}; do
     then
         echo
         echo " X X X WARNING: App ${system_applications[$n]} does not exist."
+        log_info "App ${system_applications[$n]} does not exist."
         echo
+        
         ((pos--))
         continue
     fi
@@ -59,3 +63,4 @@ done
 # Restart the Dock once to apply changes
 killall Dock
 
+log_info "Done running .macos-dock"

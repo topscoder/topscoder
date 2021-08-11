@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source utils.sh
+
 # VSCodium extensions
 # https://code.visualstudio.com/docs/editor/command-line
 codium --install-extension "formulahendry.auto-close-tag" --force;
@@ -14,16 +16,12 @@ codium --install-extension "ms-python.python" --force;
 codium --install-extension "Shan.code-settings-sync" --force;
 codium --install-extension "TabNine.tabnine-vscode" --force;
 
-echo
-echo
-echo " 👉👉👉 PLEASE INSTALL THESE EXTENSIONS MANUALLY: "
-echo " 👉👉👉 AS LONG AS THESE EXTENSIONS ARE NOT PUBLISHED TO OPEN VXS "
-echo 
-echo "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
-echo "https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff"
-echo "https://marketplace.visualstudio.com/items?itemName=jgclark.vscode-todo-highlight"
-echo "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
-echo
-echo "https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis"
-echo
-echo
+log_note "PLEASE INSTALL THESE EXTENSIONS MANUALLY: "
+log_note "AS LONG AS THESE EXTENSIONS ARE NOT PUBLISHED TO OPEN VXS "
+log_note " "
+log_note "- https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
+log_note "- https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff"
+log_note "- https://marketplace.visualstudio.com/items?itemName=jgclark.vscode-todo-highlight"
+log_note "- https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
+log_note "- https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis"
+log_note " "
