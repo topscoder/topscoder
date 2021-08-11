@@ -5,8 +5,8 @@
 # Description	:   Bootstrapper for macOS dotfiles installation.
 # Args         	:   
 # Dependencies  :   utils.sh, brew, git
-# Author       	:   mathias bynens, topscoder
-# Email         :   
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
 #################################################################################
 
 source ./utils.sh
@@ -40,12 +40,8 @@ fi
 # Install ZSH shell
 sh ./dots/.app-zsh
 
-# Unlock quarantaine mode for apps
-sh ./dots/.macos-unlocker
-
 # Install Homebrew
 sh ./dots/.app-homebrew
-
 
 # Install and upgrade (by default) cli-tools, apps from the Brewfile (.brewfile).
 brew bundle --file=./dots/.brewfile
@@ -53,6 +49,8 @@ brew bundle --file=./dots/.brewfile
 # Install Irvue wallpaper manager from App Store
 mas install 1039633667
 
+# Unlock quarantaine mode for apps
+sh ./dots/.macos-unlocker
 
 # Git configuration
 sh ./dots/.conf-git
@@ -86,6 +84,7 @@ do
     /bin/bash -c "$cmd"
 done
 
+sh ./dots/.app-sync.sh
 
 # FIXME mackup restore? or after reboot?
 

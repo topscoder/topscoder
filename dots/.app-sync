@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#################################################################################
+# File  	    :   .app-sync
+# Description	:   Installs apps from Dropbox/AppSync/*.dmg folder.
+# Args         	:   none
+# Dependencies  :   utils.sh
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
+# See https://code.visualstudio.com/docs/editor/command-line
+
+source ./utils.sh
+
+start_block "Running .app-sync"
+

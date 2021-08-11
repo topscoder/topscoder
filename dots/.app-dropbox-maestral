@@ -4,7 +4,7 @@
 # File  	    :   .app-dropbox-maestral
 # Description	:   Installs maestral (dropbox cli)
 # Args         	:   none
-# Dependencies  :   utils.sh, bitwarden-cli
+# Dependencies  :   utils.sh, bitwarden-cli, python3, pip
 # Author       	:   topscoder
 # Email         :   topscoder.at.gmail.dot.com
 #################################################################################
@@ -13,17 +13,42 @@ source ./utils.sh
 
 start_block "Running .app-dropbox-maestral"
 
-#     bitwarden cli dropbox username echo'en
-#     bitwarden cli dropbox password pbcopy
+# It is important to not use the official Dropbox app
+# Because it likely conflicts with Maestral syncs
 
-#     python3 -m pip install --upgrade maestral 
-#     maestral auth link
-#     maestral autostart -Y
-#     maestral start
-#     maestral excluded remove "/mackup"
+# TODO check if Dropbox.app is installed
+# and if so, it should be uninstalled first.
+# find /Applications -d -name "Dropbox.app"
 
-#     IMPORTANT: ~/Dropbox
+if ! [[ $(maestral auth status) =~ (dbid) ]]
+then
 
-print_in_red " NOT YET IMPLEMENTED "
+    # Login to Bitwarden
+    bw login 
+
+    echo "Reading username for dropbox.com in Bitwarden: 👀"
+    bw get username dropbox.com
+
+    # Get password from Bitwarden for dropbox.com
+    # And copy it to clipboard. Because handy.
+    bw get password dropbox.com | pbcopy
+
+    # Install maestral. Dropbox CLI tool FTW.
+    python3 -m pip install --upgrade maestral 
+    maestral auth link
+
+fi
+
+maestral stop
+
+# Point Maestral to ~/Dropbox folder
+maestral config set path "~/Dropbox"
+
+maestral autostart -Y
+
+maestral excluded remove "/mackup"
+maestral excluded remove "/AppSync"
+
+maestral start
 
 finish_block ".app-dropbox-maestral"
