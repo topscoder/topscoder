@@ -7,19 +7,24 @@ start_block "Running .app-zsh"
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh)
 
-# plugins=(
-#   git
-#   bundler
-#   dotenv
-#   osx
-#   rake
-#   rbenv
-#   ruby
-# )
+# Enable antibody (zsh plugin manager)
+if ! test `which antibody`
+then
+    brew install antibody
+fi
+
+if ! grep -Fxq "source <(antibody init)" ~/.zshrc
+then
+    echo "source <(antibody init)" >> ~/.zshrc
+fi
+
+if ! grep -Fxq "antibody bundle < ./dots/.app-zsh-plugins" ~/.zshrc
+then
+    echo "antibody bundle < ./dots/.app-zsh-plugins" >> ~/.zshrc
+fi
 
 npm install -g typewritten
 
-# then reload zsh
-# exec zsh
+log_note " >> Reload zsh by using 'exec zsh' "
 
 finish_block ".app-zsh"

@@ -35,6 +35,7 @@ tap "git-friendly/homebrew-git-friendly"
 brew "git-friendly/git-friendly/git-friendly"
 
 # Just some useful apps
+brew "antibody"
 brew "bitwarden-cli"
 brew "docker-compose"
 brew "docker"

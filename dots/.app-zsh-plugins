@@ -1,0 +1,11 @@
+#
+# Plugins file used by antibody
+# 
+
+caarlos0/jvm
+caarlos0/zsh-mkc
+caarlos0/zsh-open-github-pr
+djui/alias-tips
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
