@@ -18,9 +18,9 @@ then
     echo "source <(antibody init)" >> ~/.zshrc
 fi
 
-if ! grep -Fxq "antibody bundle < ./dots/.app-zsh-plugins" ~/.zshrc
+if ! grep -Fxq "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" ~/.zshrc
 then
-    echo "antibody bundle < ./dots/.app-zsh-plugins" >> ~/.zshrc
+    echo "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" >> ~/.zshrc
 fi
 
 npm install -g typewritten
