@@ -58,8 +58,10 @@ conf_mac=(
 
 for cfile in "${conf_mac[@]}"; 
 do
+    # if ask "$cmd" Y; then
     cmd="sh $cfile"
     /bin/bash -c "$cmd"
+    # fi
 done
 
 

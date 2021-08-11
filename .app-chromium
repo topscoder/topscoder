@@ -8,10 +8,51 @@ source ./utils.sh
 
 start_block "Running .app-chromium"
 
-#   /Applications/Chromium.app/Contents/MacOS/Chromium --make-default-browser --no-startup-window
+# Took me ages to find out, but this file is magic
+# /Applications/Chromium.app/Contents/Resources/org.chromium.Chromium.manifest/Contents/Resources/org.chromium.Chromium.manifest
+# Oh, and it's documented well also https://chromeenterprise.google/policies/atomic-groups/
+# Who knew?!
+
+# defaults write org.chromium.Chromium 
 #   set default search engine (duckduckgo or whatever)
-#   set as default browser
 #   don't warn before quitting
-print_in_red " NOT YET IMPLEMENTED "
+
+# Prevent Chrome from automatically deciding you want search results in German instead of English
+# find ~/Library/Application\ Support/Google/Chrome -name Preferences -print0 | xargs -0 perl -pi.bak -e 's{_google_url": "http://www.google.de/",}{_google_url": "http://www.google.com/",}g;'
+
+# Allow installing user scripts via GitHub Gist or Userscripts.org
+defaults write org.chromium.Chromium ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
+
+# Use the system-native print preview dialog
+defaults write org.chromium.Chromium DisablePrintPreview -bool true
+
+# Expand the print dialog by default
+defaults write org.chromium.Chromium PMPrintingExpandedStateForPrint2 -bool true
+
+# Check if Chromium is default browser. Shortcut to set as default
+defaults write org.chromium.Chromium DefaultBrowserSettingEnabled -bool true
+
+# Set default search provider
+defaults write org.chromium.Chromium DefaultSearchProviderEnabled -bool true
+defaults delete org.chromium.Chromium DefaultSearchProviederAlternateURLs
+defaults write org.chromium.Chromium DefaultSearchProviderName -string 'Hey ho lets Go-ogle'
+
+# DefaultSearchProviderNewTabURL
+defaults write org.chromium.Chromium DefaultSearchProviderSearchURL -string "https://www.google.com/search?q={searchTerms}"
+defaults write org.chromium.Chromium DefaultSearchProviderSuggestURL -string "https://www.google.com/complete/search?output=chrome&q={searchTerms}"
+
+# Disable Chromium password manager. We use our own.
+defaults write org.chromium.Chromium PasswordManagerEnabled -bool false
+
+# HomepageLocation
+# HomepageIsNewTabPage
+# NewTabPageLocation
+# ShowHomeButton
+
+# ExtensionInstallForcelist
+
+
+HomepageLocation
+
 
 finish_block ".app-chromium"
