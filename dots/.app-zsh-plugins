@@ -1,6 +1,11 @@
-#
-# Plugins file used by antibody
-# 
+#####################################################################################
+# File  	    :   .app-zsh-plugins
+# Description	:   Contains a list of zsh plugins that can be installed by maestral
+# Args         	:   none
+# Dependencies  :   
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#####################################################################################
 
 caarlos0/jvm
 caarlos0/zsh-mkc

@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-source utils.sh
+#################################################################################
+# File  	    :   .macos-dock
+# Description	:   Sets macOS Dock related settings, configurations, et al.
+# Args         	:   none
+# Dependencies  :   utils.sh, sudo, dockutil
+# Author       	:   paul irish, mathias bynens, topscoder
+# Email         :   
+#################################################################################
+
+source ./utils.sh
 
 start_block ".macos-paulirish"
-
-# ~/.macos-paulirish
-# paul's slight fork of https://mths.be/macos
 
 ###############################################################################
 # MacBookPro Touch Bar                                                        #

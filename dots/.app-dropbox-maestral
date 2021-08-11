@@ -1,9 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Ask for the administrator password upfront
-#sudo -v
+#################################################################################
+# File  	    :   .app-dropbox-maestral
+# Description	:   Installs maestral (dropbox cli)
+# Args         	:   none
+# Dependencies  :   utils.sh, bitwarden-cli
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
 
-# Install XCode Command Line Tools
 source ./utils.sh
 
 start_block "Running .app-dropbox-maestral"

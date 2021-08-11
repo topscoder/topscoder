@@ -1,9 +1,16 @@
 #!/bin/bash
 
-# VSCodium extensions
-# https://code.visualstudio.com/docs/editor/command-line
+#################################################################################
+# File  	    :   .app-vscodium
+# Description	:   Installs codium extensions and theme(s)
+# Args         	:   none
+# Dependencies  :   utils.sh, codium binary
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
+# See https://code.visualstudio.com/docs/editor/command-line
 
-source utils.sh
+source ./utils.sh
 
 start_block "Running .app-vscodium"
 

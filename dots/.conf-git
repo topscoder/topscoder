@@ -1,6 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source utils.sh
+#####################################################################################
+# File  	    :   .conf-git
+# Description	:   Sets git related configuration options
+# Args         	:   none
+# Dependencies  :   utils.sh, git
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#####################################################################################
+
+source ./utils.sh
 
 start_block "Running .conf-git"
 

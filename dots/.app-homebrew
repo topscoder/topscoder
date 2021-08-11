@@ -1,9 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Ask for the administrator password upfront
-sudo -v
+#################################################################################
+# File  	    :   .app-homebrew
+# Description	:   Installs homebrew and runs brew doctor
+# Args         	:   none
+# Dependencies  :   utils.sh, curl
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
 
-# Install XCode Command Line Tools
 source ./utils.sh
 
 start_block "Running .app-homebrew"

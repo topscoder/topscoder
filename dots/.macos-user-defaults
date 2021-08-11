@@ -1,6 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source utils.sh
+#################################################################################
+# File  	    :   .macos-dock
+# Description	:   Sets macOS Dock related settings, configurations, et al.
+# Args         	:   Unlock quarantaine mode for all /Applications
+# Dependencies  :   utils.sh, python
+# Author       	:   mathias bynens, topscoder
+# Email         :   
+#################################################################################
+
+source ./utils.sh
 
 start_block "Running .macos-user-defaults"
 

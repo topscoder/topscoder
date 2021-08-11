@@ -1,10 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+#################################################################################
+# File  	    :   runme.sh
+# Description	:   Bootstrapper for macOS dotfiles installation.
+# Args         	:   
+# Dependencies  :   utils.sh, brew, git
+# Author       	:   mathias bynens, topscoder
+# Email         :   
+#################################################################################
+
+source ./utils.sh
 
 # Ask for the administrator password upfront
-sudo -v
-
-# Install XCode Command Line Tools
-source ./utils.sh
+sudo --validate
 
 clear_logs
 

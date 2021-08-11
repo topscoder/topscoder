@@ -1,9 +1,14 @@
 #!/bin/bash
 
-# Ask for the administrator password upfront
-sudo -v
+#################################################################################
+# File  	    :   .app-mackup
+# Description	:   Creates a symlink for the mackup config file from Dropbox 
+# Args         	:   none
+# Dependencies  :   utils.sh, mackup
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
 
-# Install XCode Command Line Tools
 source ./utils.sh
 
 start_block "Running .app-mackup"

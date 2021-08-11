@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
 
-source utils.sh
+#################################################################################
+# File  	    :   .macos
+# Description	:   Sets a lot of macOS related settings, configurations, et al.
+# Args         	:   none
+# Dependencies  :   utils.sh, sudo
+# Author       	:   mathias bynens, topscoder
+# Email         :   https://mths.be/macos
+#################################################################################
 
-# Based on https://mths.be/macos
+source ./utils.sh
 
 start_block "Running .macos"
 
 # Ask for the administrator password upfront
-sudo -v
+sudo --validate
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change

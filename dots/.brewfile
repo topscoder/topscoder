@@ -1,3 +1,12 @@
+#####################################################################################
+# File  	    :   .brewfile
+# Description	:   Contains a list of brew instructions to install 
+#                   (cask) applications, mas (Mac App Store), fonts et al.
+# Args         	:   none
+# Dependencies  :   brew, cask
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#####################################################################################
 # See: github.com/Homebrew/homebrew-bundle
 
 # mas-cli – cli interface for Mac App Store

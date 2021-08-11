@@ -2,9 +2,6 @@
 <!--
 Semi easter egg 👀
 https://github.com/abhisheknaiidu/awesome-github-profile-readme
-
-# Load theme file
-zplug 'dracula/zsh', as:theme
 -->
 
 Developing in whatever language fits the most. Not speaking all of them though. Mostly Python, PHP, Node.js, C++. I often get a lot of inspiration by the tools, gear and other assets that are used by fellow developers. One of which is probably the most famous: https://wesbos.com/uses. At least it was my first inspiration for creating this profile here on GitHub.
@@ -75,28 +72,10 @@ I'm interested in:
 - 💡 Gadgets
 - 💡 People and their mindset
 
-Visual Studio Code specific
+All In One Installation (aka .dotfiles)
 ---
 
-Extensions I like:
-
-- 🧩 Auto Rename Tag
-- 🧩 Bracket Pair Colorizer
-- 🧩 Fluent Icons
-- 🧩 GitLens
-- 🧩 Indent-rainbow
-- 🧩 JetBrains IDE Keymap
-- 🧩 MagicPython
-- 🧩 Noctis
-- 🧩 Prettier
-- 🧩 Pylance
-- 🧩 Tabnine
-- 🧩 TODO highlight
-
-All In One Installation
----
-
-Every few months I [cleanup my computer(s)](https://www.imore.com/how-do-clean-install-macos) by formatting the entire machine and start with a [fresh OS installation](https://www.imore.com/how-do-clean-install-macos). In order to install all my fellow apps and tools in a fast and convenient way, I've written a script to do so.
+Every few months I [cleanup my computer(s)](https://www.imore.com/how-do-clean-install-macos) by formatting the entire machine and start with a [fresh OS installation](https://www.imore.com/how-do-clean-install-macos). In order to install all my fellow apps and tools in a fast and convenient way, I've created a setup tool with .dotfiles. Look around and you'll find some inspiration. Promised!
 
 https://github.com/topscoder/topscoder/blob/main/runme.sh
 

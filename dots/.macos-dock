@@ -1,11 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source utils.sh
+#################################################################################
+# File  	    :   .macos-dock
+# Description	:   Sets macOS Dock related settings, configurations, et al.
+# Args         	:   none
+# Dependencies  :   utils.sh, sudo, dockutil
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
+
+source ./utils.sh
+
+start_block "Running .macos-dock"
 
 # Ask for the administrator password upfront
 sudo --validate
-
-start_block "Running .macos-dock"
 
 # Defaults to your current home directory.
 # Set to another home directory if you 

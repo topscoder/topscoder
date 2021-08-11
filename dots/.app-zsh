@@ -1,4 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+#################################################################################
+# File  	    :   .app-zsh                                                                                              
+# Description	:   Installs ohmyzsh, antibody zsh manager, typewritten
+# Args         	:   none
+# Dependencies  :   utils.sh, brew, npm
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
 
 source utils.sh
 
@@ -13,16 +22,19 @@ then
     brew install antibody
 fi
 
+# Add `source <(antibody init)` command to .zshrc
 if ! grep -Fxq "source <(antibody init)" ~/.zshrc
 then
     echo "source <(antibody init)" >> ~/.zshrc
 fi
 
+# Add `antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins` command to .zshrc
 if ! grep -Fxq "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" ~/.zshrc
 then
     echo "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" >> ~/.zshrc
 fi
 
+# Install typewritten
 npm install -g typewritten
 
 log_note " >> Reload zsh by using 'exec zsh' "

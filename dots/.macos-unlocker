@@ -1,13 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source utils.sh
-
+#################################################################################
+# File  	    :   .macos-dock
+# Description	:   Sets macOS Dock related settings, configurations, et al.
+# Args         	:   Unlock quarantaine mode for all /Applications
+# Dependencies  :   utils.sh, sudo
+# Author       	:   Boyan Atanasov, topscoder
+# Email         :   
+#################################################################################
 # See https://github.com/stefansundin/dotfiles/blob/master/setup-mac.sh
-# Created by Boyan Atanasov, 2019-11-03
-# Modified by topscoder
-# Unlock quarantaine mode for all /Applications
-# Removes the quarantine attribute in OSX
-# Catalina from runnable applications.
+
+source ./utils.sh
 
 start_block "Running .macos-unlocker"
 
