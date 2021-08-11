@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Install XCode Command Line Tools
+source ./utils.sh
+
+start_block "Running .app-mackup"
+
+print_in_red " NOT YET IMPLEMENTED "
+
+# Mackup
+#     ln -fs ~/Dropbox/Mackup/.mackup.cfg ~/.mackup.cfg
+#     Dropbox ^ is vereist
+#     mackup -f restore
+
+
+finish_block ".app-mackup"

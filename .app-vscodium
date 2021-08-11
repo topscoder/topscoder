@@ -1,13 +1,11 @@
 #!/bin/bash
 
-source utils.sh
-
-echo 
-log_info " 👉👉👉 VSCodium extensions (.app-vscodium)"
-echo " 👉👉👉 VSCodium extensions (.app-vscodium)"
-
 # VSCodium extensions
 # https://code.visualstudio.com/docs/editor/command-line
+
+source utils.sh
+
+start_block "Running .app-vscodium"
 
 codium_ext=(
     "formulahendry.auto-close-tag" 
@@ -25,10 +23,11 @@ codium_ext=(
 for cext in "${codium_ext[@]}"; 
 do
     cmd="codium --install-extension \"$cext\" --force;"
-    echo "installing $cext"
+    echo "> installing $cext"
     bash -c $cmd
 done
 
+# TODO drop in logfile on Desktop or so.. or open logfile and drop these messages in there
 log_note "PLEASE INSTALL THESE EXTENSIONS MANUALLY: "
 log_note "AS LONG AS THESE EXTENSIONS ARE NOT PUBLISHED TO OPEN VXS "
 log_note " "
@@ -39,5 +38,4 @@ log_note "- https://marketplace.visualstudio.com/items?itemName=rangav.vscode-th
 log_note "- https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis"
 log_note " "
 
-echo " ✅  Done "
-echo 
+finish_block ".app-vscodium"

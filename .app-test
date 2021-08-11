@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# macOS configuration
+conf_mac=(
+    '.macos' 
+    '.macos-user-defaults' 
+    '.macos-paulirish' 
+    '.macos-dock')
+
+for cfile in "${conf_mac[@]}"; 
+do
+    echo "doing $cfile"
+    cmd="sh $cfile"
+    /bin/bash -c "$cmd"
+done

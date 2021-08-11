@@ -4,6 +4,8 @@ source utils.sh
 
 # TODO: Make adding dividers possible
 
+start_block "Running .macos-dock"
+
 # Defaults to your current home directory.
 # Set to another home directory if you 
 # want to add to another users Dock
@@ -63,4 +65,4 @@ done
 # Restart the Dock once to apply changes
 killall Dock
 
-log_info "Done running .macos-dock"
+finish_block ".macos-dock"

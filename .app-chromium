@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Install XCode Command Line Tools
+source ./utils.sh
+
+start_block "Running .app-chromium"
+
+#   /Applications/Chromium.app/Contents/MacOS/Chromium --make-default-browser --no-startup-window
+#   set default search engine (duckduckgo or whatever)
+#   set as default browser
+#   don't warn before quitting
+print_in_red " NOT YET IMPLEMENTED "
+
+finish_block ".app-chromium"

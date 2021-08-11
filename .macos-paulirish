@@ -2,6 +2,8 @@
 
 source utils.sh
 
+start_block ".macos-paulirish"
+
 # ~/.macos-paulirish
 # paul's slight fork of https://mths.be/macos
 
@@ -657,3 +659,5 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 echo " 👉👉👉 Done. Note that some of these changes require a logout/restart to take effect."
 
 log_note "Note that some of these changes require a logout/restart to take effect."
+
+finish_block ".macos-paulirish"

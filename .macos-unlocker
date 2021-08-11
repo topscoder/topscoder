@@ -4,24 +4,23 @@ source utils.sh
 
 # See https://github.com/stefansundin/dotfiles/blob/master/setup-mac.sh
 # Created by Boyan Atanasov, 2019-11-03
-
 # Modified by topscoder
 # Unlock quarantaine mode for all /Applications
-
 # Removes the quarantine attribute in OSX
 # Catalina from runnable applications.
+
+start_block "Running .macos-unlocker"
+
 QUARANTINE_ATTR="com.apple.quarantine"
 
-echo "Attribute discovery started..."
+echo "Quarantaine attribute discovery started..."
 for APPLICATION in /Applications/*; do
 
     # See all attributes on app
     ATTRIBUTES=$(sudo xattr "$APPLICATION")
-    #echo -e $ATTRIBUTES
     # check if attributes contain a quarantine
     # attribute
     if [[ $ATTRIBUTES == *$QUARANTINE_ATTR* ]]; then
-        # echo -e "Quarantine attribute found."
         # remove the attribute
         sudo xattr -r -d $QUARANTINE_ATTR "$APPLICATION"
         echo "Quarantine attribute removed from $APPLICATION"
@@ -36,4 +35,4 @@ sudo spctl --master-disable
 # Prevent Gatekeeper from re-enabling itself after 30 days ("Allow apps downloaded from" in "Security & Privacy")
 sudo defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool false
 
-log_info "Done running .macos-unlocker"
+finish_block ".macos-unlocker"

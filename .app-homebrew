@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Install XCode Command Line Tools
+source ./utils.sh
+
+start_block "Running .app-homebrew"
+
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Make sure everythin' is working properly
+brew doctor
+
+finish_block ".app-homebrew"

@@ -2,6 +2,8 @@
 
 source utils.sh
 
+start_block "Running .macos-user-defaults"
+
 # ==============================================
 # .macos-user-defaults
 #
@@ -578,3 +580,5 @@ defaults write com.apple.Terminal "Startup Window Settings" -string "Basic Impro
 defaults write com.apple.Terminal "Default Window Settings" -string "Basic Improved"
 
 CFPreferencesAppSynchronize "com.apple.Terminal"
+
+finish_block ".macos-user-defaults"

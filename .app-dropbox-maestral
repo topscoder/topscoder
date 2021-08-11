@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Ask for the administrator password upfront
+#sudo -v
+
+# Install XCode Command Line Tools
+source ./utils.sh
+
+start_block "Running .app-dropbox-maestral"
+
+#     bitwarden cli dropbox username echo'en
+#     bitwarden cli dropbox password pbcopy
+
+#     python3 -m pip install --upgrade maestral 
+#     maestral auth link
+#     maestral autostart -Y
+#     maestral start
+#     maestral excluded remove "/mackup"
+
+#     IMPORTANT: ~/Dropbox
+
+print_in_red " NOT YET IMPLEMENTED "
+
+finish_block ".app-dropbox-maestral"

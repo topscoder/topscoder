@@ -27,10 +27,6 @@ brew "glances"
 # See: https://sourabhbajaj.com/mac-setup/BashCompletion/
 brew "bash-completion"
 
-# Add the following line to your ~/.bash_profile:
-# FIXME only if not already installed
-# echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile
-
 # Install homebrew packages (default -cli- applications)
 brew "git"
 
@@ -52,7 +48,6 @@ cask "appcleaner"
 cask "bitwarden"
 cask "commander-one"
 cask "discord"
-cask "dropbox"
 cask "eloston-chromium"
 cask "keepingyouawake"
 cask "kitty"
@@ -80,6 +75,5 @@ cask "quicknfo"
 
 # Fonts
 tap "homebrew/cask-fonts"
-
 cask "font-fira-code"
 cask "font-fantasque-sans-mono-nerd-font"

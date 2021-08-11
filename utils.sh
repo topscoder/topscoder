@@ -74,3 +74,13 @@ print_result() {
 
     return $1
 }
+
+start_block() {
+    echo ""
+    print_in_green "`date` 👉  $1 \n"
+}
+
+finish_block() {
+    print_in_green "`date` 🏁  $1 \n"
+    echo ""
+}

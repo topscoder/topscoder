@@ -18,30 +18,26 @@ then
     cd .dotfiles/
 fi
 
-# Check if we are in .dotfiles folder now. It's imprtant
+# Check if we are in .dotfiles folder now. It's important. We need 'em
 if ! [[ $(pwd) =~ (\.dotfiles$) ]];
 then
     echo
-    echo 
     echo " ==> IT LOOKS LIKE THE .DOTFILES FOLDER IS NOT INSTALLED."
     echo " ==> PLEASE FIX IT. "
     echo " ==> I QUIT. "
-    echo
     echo
     exit 1
 fi
 
 # Install ZSH shell
-sh .zshconfig
+sh .app-zsh
 
 # Unlock quarantaine mode for apps
 sh .macos-unlocker
 
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sh .app-homebrew
 
-# Make sure everythin is working properly
-brew doctor
 
 # Install and upgrade (by default) cli-tools, apps from the Brewfile (.brewfile).
 brew bundle --file=.brewfile
@@ -49,64 +45,40 @@ brew bundle --file=.brewfile
 # Install Irvue wallpaper manager from App Store
 mas install 1039633667
 
-# FIXME
-#./oh-my-zsh.sh
 
 # Git configuration
-echo 
-echo 
-log_info " 👉👉👉 Git configuration (.gitsettings)"
-echo " 👉👉👉 Git configuration (.gitsettings)"
-echo 
-echo 
+sh .conf-git
 
-sh .gitsettings
+# macOS configuration
+conf_mac=(
+    '.macos' 
+    '.macos-user-defaults' 
+    '.macos-paulirish' 
+    '.macos-dock')
 
-
-echo 
-echo 
-log_info " 👉👉👉 macOS configuration (.macos*)"
-echo " 👉👉👉 macOS configuration (.macos*)"
-echo 
-echo 
-
-sh .macos
-sh .macos-user-defaults
-sh .macos-paulirish
-sh .macos-dock
+for cfile in "${conf_mac[@]}"; 
+do
+    cmd="sh $cfile"
+    /bin/bash -c "$cmd"
+done
 
 
-echo 
-echo 
-log_info " 👉👉👉 Reload applications"
-echo " 👉👉👉 Reload applications"
-echo 
-echo 
+# Application settings YEEHA!
+apps=(
+    '.app-vscodium' 
+    '.app-chromium' 
+    '.app-dropbox-maestral' 
+    '.app-mackup')
 
-killall Dock
-killall Finder
+for afile in "${apps[@]}"; 
+do
+    cmd="sh $afile"
+    /bin/bash -c "$cmd"
+done
 
-# VSCodium extensions
-echo 
-echo 
-log_info " 👉👉👉 VSCodium extensions (.vscodium)"
-echo " 👉👉👉 VSCodium extensions (.vscodium)"
-echo 
-echo 
 
-sh .vscodium
-
+# FIXME mackup restore? or after reboot?
 
 # Done
-echo
-echo
-echo " 👉👉👉 INSTALLATION DONE"
-echo
-echo "Don't forget to read 'notes.log' for important messages!"
-echo
-echo " 👉👉👉 KTHXBAI"
-echo
-
-log_note " 👉👉👉 INSTALLATION DONE"
-log_note "Don't forget to run 'mackup restore'"
-log_note " 👉👉👉 KTHXBAI"
+finish_block " DON'T FORGET TO REBOOT NOW!"
+finish_block " KTHXBAI"

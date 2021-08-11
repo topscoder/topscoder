@@ -4,6 +4,8 @@ source utils.sh
 
 # Based on https://mths.be/macos
 
+start_block "Running .macos"
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -229,10 +231,4 @@ sudo /usr/sbin/sysadminctl -guestAccount off
 sudo /usr/sbin/sysadminctl -afpGuestAccess off
 sudo /usr/sbin/sysadminctl -smbGuestAccess off
 
-echo
-echo 
-echo " 👉👉👉 Done running .macos. Note that these changes require a restart to take effect."
-echo
-echo
-
-log_info "Done running .macos"
+finish_block ".macos"

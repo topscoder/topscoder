@@ -1,5 +1,7 @@
 # NOTES
 
+# Alfred
+- [ ] Install Alfred
 - [ ] Alfred Workflows 
     - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/BugNot
     - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/RunCommand
