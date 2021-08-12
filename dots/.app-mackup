@@ -13,12 +13,13 @@ source ./utils.sh
 
 start_block "Running .app-mackup"
 
-print_in_red " NOT YET IMPLEMENTED "
-
 # Mackup
-#     ln -fs ~/Dropbox/Mackup/.mackup.cfg ~/.mackup.cfg
-#     Dropbox ^ is vereist
-#     mackup -f restore
-
+if [ "$(which mackup)" = "" ]; 
+then 
+    print_error "Could not restore mackup settings. No mackup installation found."
+    exit 1
+else
+    mackup -f restore
+fi  
 
 finish_block ".app-mackup"

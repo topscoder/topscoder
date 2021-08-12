@@ -77,10 +77,10 @@ All In One Installation (aka .dotfiles)
 
 Every few months I [cleanup my computer(s)](https://www.imore.com/how-do-clean-install-macos) by formatting the entire machine and start with a [fresh OS installation](https://www.imore.com/how-do-clean-install-macos). In order to install all my fellow apps and tools in a fast and convenient way, I've created a setup tool with .dotfiles. Look around and you'll find some inspiration. Promised!
 
-https://github.com/topscoder/topscoder/blob/main/runme.sh
+https://github.com/topscoder/topscoder/blob/main/installer.sh
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/topscoder/topscoder/main/runme.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/topscoder/topscoder/main/installer.sh)"
 ```
 
 <!--

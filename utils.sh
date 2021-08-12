@@ -144,3 +144,7 @@ finish_block() {
     print_in_green "`date` 🏁  $1 \n"
     echo ""
 }
+
+restart() {
+  sudo shutdown -r now &> /dev/null
+}
