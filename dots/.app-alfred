@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#################################################################################
+# File  	    :   .app-alfred
+# Description	:   Changes some hot settings, like Alfred hotkey to ⌘ + Space
+#                   and syncing using Dropbox.
+# Args         	:   none
+# Dependencies  :   utils.sh, Alfred, Dropbox, Mackup
+# Author       	:   topscoder
+# Email         :   topscoder.at.gmail.dot.com
+#################################################################################
+# 131072  → Shift
+# 262144  → Control
+# 524288  → Option
+# 1048576 → Command
+
+source ./utils.sh
+
+start_block "Running .app-alfred"
+
+# Change default "Show Spotligh Search" shortcut ⌥ + Space
+execute "defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 \"{enabled = 1; value = { parameters = (32, 49, 524288); type = 'standard'; }; }\"" \
+    "Show Spotlight Search → ⌥ + Space"
+
+# Set Alfred shortcut to ⌘ + Space
+execute 'defaults write com.runningwithcrayons.Alfred-Preferences hotkey.default -dict key -int 49 mod -int 1048576 string Space' \
+    'Set ⌘ + Space hotkey'
+
+# Set syncfolder so Dropbox would sync it between my devices
+execute 'defaults write com.runningwithcrayons.Alfred-Preferences syncfolder "$HOME/Dropbox/Mackup/.alfred"' \
+    'Set sync folder'
+
+# Installing Alfred Workflows
+wfs=(
+    'https://github.com/blacs30/bitwarden-alfred-workflow/releases/latest/download/bitwarden-alfred-workflow.alfredworkflow'
+    'https://github.com/vitorgalvao/alfred-workflows/raw/master/StrongPassword/StrongPassword.alfredworkflow'
+    'https://github.com/vitorgalvao/alfred-workflows/raw/master/RunCommand/RunCommand.alfredworkflow'
+    'https://github.com/vitorgalvao/alfred-workflows/raw/master/BugNot/BugNot.alfredworkflow'
+)
+
+TMPFILE="tmp.alfredworkflow"
+for wf in "${wfs[@]}";
+do
+    wf_basename=$(basename $wf)
+    print_in_purple "Installing Alfred Workflow: '$wf_basename' ...\n"
+    wget -qO "$TMPFILE" "$wf"
+    open -b com.runningwithcrayons.Alfred-Preferences "$TMPFILE"
+    ask "Please proceed in Alfred Preferences. When ready hit <any key> to continue ..."
+    rm -f "$TMPFILE"
+    print_in_green "=> OK \n"
+done
+
+# NOTE: It is important to reboot
+# or killall 'Alfred 4' &> /dev/null
+# and killall 'Alfred Preferences' &> /dev/null
+finish_block ".app-alfred"

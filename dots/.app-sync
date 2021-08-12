@@ -2,15 +2,35 @@
 
 #################################################################################
 # File  	    :   .app-sync
-# Description	:   Installs apps from Dropbox/AppSync/*.dmg folder.
+# Description	:   Installs apps from Dropbox/AppSync/*.dmg.
 # Args         	:   none
 # Dependencies  :   utils.sh
 # Author       	:   topscoder
 # Email         :   topscoder.at.gmail.dot.com
 #################################################################################
-# See https://code.visualstudio.com/docs/editor/command-line
 
 source ./utils.sh
 
 start_block "Running .app-sync"
 
+abspath=$(realpath ~/Dropbox/AppSync)
+
+for dmg_file in $abspath/*.dmg;
+do
+    log_info "Mounting and installing: $dmg_file"
+    print_in_purple "Mounting and installing: $dmg_file \n"
+
+    listing=$(sudo hdiutil attach "$dmg_file" | grep Volumes)
+    volume=$(echo "$listing" | cut -f 3)
+
+    if [ -e "$volume"/*.app ]; then
+        sudo cp -rf "$volume"/*.app /Applications
+    elif [ -e "$volume"/*.pkg ]; then
+        package=$(ls -1 "$volume" | grep .pkg | head -1)
+        sudo installer -pkg "$volume"/"$package" -target /
+    fi
+
+    sudo hdiutil detach "$volume"
+done
+
+finish_block ".app-sync"

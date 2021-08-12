@@ -1,18 +1,24 @@
 # NOTES
 
-- [ ] Install Alfred
-- [ ] Alfred Workflows 
-    - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/BugNot
-    - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/RunCommand
-    - [ ] https://github.com/vitorgalvao/alfred-workflows/tree/master/StrongPassword
-    - [x] https://github.com/blacs30/bitwarden-alfred-workflow
 - [ ] What about ssh keys for private servers and github?
-- [ ] Configure Dropbox to use my account so mackup can do it's job
+    - Setup GitHub SSH Key: https://github.com/michelegera/dotfiles/blob/6fe4223d33d00790c199c8c459853165f04c0b82/os/update_content.sh
 - [ ] Restore settings using mackup sync (`mackup restore`)
 - [ ] Fix settings for new installed apps, like 
-    - [ ] Rocket.app -> Launch at startup
-    - [ ] Ubersicht -> Launch at startup
-    - [ ] Irvue.app -> Launch at startup
+    - [ ] Alfred.app
+        - [ ] Launch at startup
+    - [ ] Rocket.app
+        - [ ] Launch at startup
+    - [ ] Ubersicht
+        - [ ] Launch at startup
+    - [ ] Irvue.app
+        - [ ] Launch at startup
+- [x] Install Alfred
+- [x] Alfred Workflows 
+    - [x] https://github.com/vitorgalvao/alfred-workflows/tree/master/BugNot
+    - [x] https://github.com/vitorgalvao/alfred-workflows/tree/master/RunCommand
+    - [x] https://github.com/vitorgalvao/alfred-workflows/tree/master/StrongPassword
+    - [x] https://github.com/blacs30/bitwarden-alfred-workflow
+- [x] Configure Dropbox to use my account so mackup can do it's job
 - [x] Implement `npm install -g typewritten`
 - [x] Link wallpaper from $HOMEDIR/Afbeeldingen/wallpaper.jpg to Dropbox
 - [x] Security; open apps and allow anyway command
