@@ -28,6 +28,8 @@ then
     brew install git
     git clone https://github.com/topscoder/topscoder.git ./.dotfiles/
     cd .dotfiles/
+else
+    git update
 fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -35,9 +37,9 @@ fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 if ! [[ $(pwd) =~ (\.dotfiles$) ]];
 then
-    echo " ==> IT LOOKS LIKE THE .DOTFILES FOLDER IS NOT INSTALLED."
-    echo " ==> PLEASE FIX IT. "
-    echo " ==> I QUIT. 👋 "
+    print_error " ==> IT LOOKS LIKE THE .DOTFILES FOLDER IS NOT INSTALLED."
+    print_error " ==> PLEASE FIX IT. "
+    print_error " ==> I QUIT. 👋 "
     exit 1
 fi
 
