@@ -14,8 +14,9 @@ source ./utils.sh
 start_block "Running .app-sync"
 
 abspath=$(realpath ~/Dropbox/AppSync)
+apps=$($abspath/*.dmg)
 
-for dmg_file in $abspath/*.dmg;
+for dmg_file in $apps;
 do
     log_info "Mounting and installing: $dmg_file"
     print_in_purple "Mounting and installing: $dmg_file \n"

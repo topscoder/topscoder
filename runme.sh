@@ -84,10 +84,10 @@ do
     /bin/bash -c "$cmd"
 done
 
-sh ./dots/.app-sync.sh
+sh ./dots/.app-sync
 
-# FIXME mackup restore? or after reboot?
+# TODO mackup restore? or after reboot?
 
 # Done
-finish_block " DON'T FORGET TO REBOOT NOW!"
-finish_block " KTHXBAI"
+finish_block " ‼️ DON'T FORGET TO REBOOT NOW!"
+finish_block " 😽 KTHXBAI"
