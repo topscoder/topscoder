@@ -42,17 +42,24 @@ then
 
 fi
 
-maestral stop
+# If maestral is not already started
+if ! [[ $(maestral status) =~ (Up to date) ]]
+then
+    maestral stop
 
-# Point Maestral to ~/Dropbox folder
-mkdir -p ~/Dropbox
-maestral config set path "~/Dropbox"
+    # Point Maestral to ~/Dropbox folder
+    mkdir -p ~/Dropbox
+    maestral config set path "~/Dropbox"
 
-maestral autostart -Y
+    # `maestral config-files` contains maestral.ini
+fi
 
 # Maestral is like Dropbox in a submarine. 
 # It is there but you don't see it. 🌊
-maestral start
+
+# Don't start maestral explicit because it could start
+# syncing (a lot of) files. We wait until the next reboot.
+maestral autostart -Y
 
 # I want these folders to be synced at all times
 maestral excluded remove "/mackup"

@@ -11,9 +11,19 @@
 
 source ./utils.sh
 
+sudo --validate
+
 start_block "Running .app-sync"
 
 abspath=$(realpath ~/Dropbox/AppSync)
+
+if ! [[ -d "$abspath" ]];
+then
+    print_error "Sorry but there is no AppSync directory found."
+    print_error "It probably is not synced yet?"
+    exit 1
+fi
+
 apps=$($abspath/*.dmg)
 
 for dmg_file in $apps;

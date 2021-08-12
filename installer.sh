@@ -98,8 +98,7 @@ apps=(
     '.app-alfred'
     '.app-dropbox-maestral' 
     '.app-mackup'
-    '.app-sync'
-    '.app-zsh-plugins')
+    '.app-sync')
 
 for afile in "${apps[@]}"; 
 do
