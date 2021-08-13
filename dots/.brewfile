@@ -50,6 +50,7 @@ brew "docker-compose"
 brew "docker"
 brew "dockutil"
 brew "mackup"
+brew "pipenv"
 brew "zsh-async"
 brew "zsh"
 
