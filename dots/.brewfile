@@ -46,6 +46,7 @@ brew "git-friendly/git-friendly/git-friendly"
 # Just some useful apps
 brew "antibody"
 brew "bitwarden-cli"
+brew "caprine"
 brew "docker-compose"
 brew "docker"
 brew "dockutil"
