@@ -46,7 +46,6 @@ brew "git-friendly/git-friendly/git-friendly"
 
 # Just some useful apps
 brew "antibody"
-brew "keepassxc"
 brew "caprine"
 brew "docker-compose"
 brew "docker"
@@ -58,7 +57,7 @@ brew "zsh"
 
 # Install native GUI applications using brew --cask
 cask "appcleaner"
-cask "bitwarden"
+cask "keepassxc"
 cask "commander-one"
 cask "element"
 cask "eloston-chromium"
