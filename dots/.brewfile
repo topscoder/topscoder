@@ -38,6 +38,7 @@ brew "bash-completion"
 
 # Install homebrew packages (default -cli- applications)
 brew "git"
+brew "pre-commit" # ❤️
 
 # See: https://github.com/git-friendly/git-friendly
 tap "git-friendly/homebrew-git-friendly"
@@ -45,22 +46,23 @@ brew "git-friendly/git-friendly/git-friendly"
 
 # Just some useful apps
 brew "antibody"
-brew "bitwarden-cli"
 brew "docker-compose"
 brew "docker"
 brew "dockutil"
 brew "mackup"
+brew "pipenv"
 brew "zsh-async"
 brew "zsh"
 
 # Install native GUI applications using brew --cask
 cask "appcleaner"
-cask "bitwarden"
+cask "keepassxc"
 cask "commander-one"
-cask "discord"
+cask "element"
 cask "eloston-chromium"
 cask "keepingyouawake"
 cask "kitty"
+cask "pycharm-ce"
 cask "rectangle"
 cask "rocket"
 cask "ubersicht"

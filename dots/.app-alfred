@@ -32,7 +32,6 @@ execute 'defaults write com.runningwithcrayons.Alfred-Preferences syncfolder "$H
 
 # Installing Alfred Workflows
 wfs=(
-    'https://github.com/blacs30/bitwarden-alfred-workflow/releases/latest/download/bitwarden-alfred-workflow.alfredworkflow'
     'https://github.com/vitorgalvao/alfred-workflows/raw/master/StrongPassword/StrongPassword.alfredworkflow'
     'https://github.com/vitorgalvao/alfred-workflows/raw/master/RunCommand/RunCommand.alfredworkflow'
     'https://github.com/vitorgalvao/alfred-workflows/raw/master/BugNot/BugNot.alfredworkflow'
