@@ -9,6 +9,14 @@
 #####################################################################################
 # See: github.com/Homebrew/homebrew-bundle
 
+# Removed applications should be uninstalled
+brew uninstall "bitwarden-cli"
+brew uninstall "bitwarden"
+cast uninstall "eloston-chromium"
+brew uninstall "caprine"
+brew uninstall "element"
+
+
 # mas-cli – cli interface for Mac App Store
 # See: https://github.com/mas-cli/mas
 brew "mas"
@@ -58,7 +66,7 @@ brew "zsh"
 cask "appcleaner"
 cask "keepassxc"
 cask "commander-one"
-cask "element"
+cask "discord"
 cask "keepingyouawake"
 cask "kitty"
 cask "opera"
@@ -70,7 +78,7 @@ cask "vmware-fusion"
 cask "vscodium"
 
 # Free Database Management Tool
-# cask valentina-studio
+cask valentina-studio
 
 # Quick Look Plugins
 cask "betterzip"
