@@ -32,9 +32,9 @@ execute 'defaults write com.runningwithcrayons.Alfred-Preferences syncfolder "$H
 
 # Installing Alfred Workflows
 wfs=(
-    'https://github.com/vitorgalvao/alfred-workflows/raw/master/StrongPassword/StrongPassword.alfredworkflow'
     'https://github.com/vitorgalvao/alfred-workflows/raw/master/RunCommand/RunCommand.alfredworkflow'
     'https://github.com/vitorgalvao/alfred-workflows/raw/master/BugNot/BugNot.alfredworkflow'
+    'https://github.com/Angoll/KPass/raw/master/KPass.v2.2.alfredworkflow'
 )
 
 TMPFILE="tmp.alfredworkflow"
@@ -52,4 +52,7 @@ done
 # NOTE: It is important to reboot
 # or killall 'Alfred 4' &> /dev/null
 # and killall 'Alfred Preferences' &> /dev/null
+killall 'Alfred 4' &> /dev/null
+killall 'Alfred Preferences' &> /dev/null
+
 finish_block ".app-alfred"

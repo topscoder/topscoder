@@ -9,13 +9,6 @@
 #####################################################################################
 # See: github.com/Homebrew/homebrew-bundle
 
-# Removed applications should be uninstalled
-brew uninstall "bitwarden-cli"
-brew uninstall "bitwarden"
-cast uninstall "eloston-chromium"
-brew uninstall "caprine"
-brew uninstall "element"
-
 
 # mas-cli – cli interface for Mac App Store
 # See: https://github.com/mas-cli/mas
@@ -38,7 +31,7 @@ brew "openssh"
 brew "vim"
 brew "wget"
 
-# better `top`
+# fancier `top`
 brew "glances"
 
 # See: https://sourabhbajaj.com/mac-setup/BashCompletion/
@@ -53,7 +46,7 @@ tap "git-friendly/homebrew-git-friendly"
 brew "git-friendly/git-friendly/git-friendly"
 
 # Just some useful apps
-brew "antibody"
+brew "antibody"             # Antibody is a shell plugin manager.
 brew "docker-compose"
 brew "docker"
 brew "dockutil"
@@ -64,11 +57,10 @@ brew "zsh"
 
 # Install native GUI applications using brew --cask
 cask "appcleaner"
-cask "keepassxc"
 cask "commander-one"
 cask "discord"
+cask "keepassxc"
 cask "keepingyouawake"
-cask "kitty"
 cask "opera"
 cask "pycharm-ce"
 cask "rectangle"
@@ -78,7 +70,7 @@ cask "vmware-fusion"
 cask "vscodium"
 
 # Free Database Management Tool
-cask valentina-studio
+cask "valentina-studio"
 
 # Quick Look Plugins
 cask "betterzip"

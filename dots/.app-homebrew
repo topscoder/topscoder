@@ -18,6 +18,14 @@ if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Removed applications should be uninstalled
+brew uninstall "bitwarden-cli" \
+                "bitwarden" \
+                "eloston-chromium" \
+                "caprine" \
+                "element" \
+                "kitty"
+
 # Make sure everythin' is working properly
 brew doctor
 
