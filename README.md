@@ -4,7 +4,7 @@ Semi easter egg 👀
 https://github.com/abhisheknaiidu/awesome-github-profile-readme
 -->
 
-Developing in whatever language fits the most. Not speaking all of them though. Mostly Python, PHP, Node.js, C++. I often get a lot of inspiration by the tools, gear and other assets that are used by fellow developers. One of which is probably the most famous: https://wesbos.com/uses. At least it was my first inspiration for creating this profile here on GitHub.
+Developing in whatever language fits the most. Not speaking all of them though. Most of the time `Python`, `PHP`, `Node.js` (`TypeScript`), `C++`. I often get a lot of inspiration by the tools, gear and other assets that are used by fellow developers. One of which is probably the most famous: https://wesbos.com/uses. At least it was my first inspiration for creating this profile here on GitHub.
 
 Gear I have around:
 
