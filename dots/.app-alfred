@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #################################################################################
-# File  	    :   .app-alfred
+# File:			:	.app-alfred
 # Description	:   Changes some hot settings, like Alfred hotkey to ⌘ + Space
 #                   and syncing using Dropbox.
 # Args         	:   none
@@ -34,7 +34,10 @@ execute 'defaults write com.runningwithcrayons.Alfred-Preferences syncfolder "$H
 wfs=(
     'https://github.com/vitorgalvao/alfred-workflows/raw/master/RunCommand/RunCommand.alfredworkflow'
     'https://github.com/vitorgalvao/alfred-workflows/raw/master/BugNot/BugNot.alfredworkflow'
-    'https://github.com/Angoll/KPass/raw/master/KPass.v2.2.alfredworkflow'
+    'https://github.com/blacs30/bitwarden-alfred-workflow/releases/download/2.4.1/bitwarden-alfred-workflow.alfredworkflow'
+    'https://github.com/vitorgalvao/alfred-workflows/blob/master/CoffeeCoffee/CoffeeCoffee.alfredworkflow'
+    'https://github.com/vitorgalvao/alfred-workflows/blob/master/StrongPassword/StrongPassword.alfredworkflow'
+    'https://github.com/vitorgalvao/alfred-workflows/blob/master/TemporaryEmail/TemporaryEmail.alfredworkflow'
 )
 
 TMPFILE="tmp.alfredworkflow"
