@@ -14,7 +14,7 @@ Gear I have around:
 - 🤖 [Sony WH-1000XM3](https://amzn.to/3lDCWbW)
 - 🤖 [Google Coral TPU](https://coral.ai/products/)
 - 🤖 [Arduino's, Raspberry Pi's](https://amzn.to/3lAMvs7)
-- 🤖 [Philips Hue Bars](https://amzn.to/2Vso5Go) w/ [Circadian Lighting](https://github.com/claytonjn/hass-circadian_lighting)
+- 🤖 [Philips Hue Play](https://amzn.to/2Vso5Go) w/ [Circadian Lighting](https://github.com/claytonjn/hass-circadian_lighting)
 
 <hr>
 
@@ -27,17 +27,15 @@ Gear I have around:
 Apps I'm using:
 
 - ⚡ [keepingyouawake](https://github.com/newmarcel/KeepingYouAwake) – to keep my Mac awake when I want to.
-- ⚡ I switched from Authy to [Raivo OTP](https://github.com/raivo-otp/).
 - ⚡ [Bitwarden](https://github.com/bitwarden) – open source password manager. Used 1Password as a paying customer until they switched to monthly payments.
-  - 👉  I'm still looking for a neat and safe alternative for Bitwarden. The UI and UX of Bitwarden is far behind 1Password.
 - ⚡ Discord – connecting to other people a.k.a. IRC 2021
 - ⚡ Docker – all things virtual.
 - ⚡ Filezilla - open source FTP, FTPS, SFTP client.
-- ⚡ Kitty Terminal – Cross Platform high performance Terminal using GPU power.
-- ⚡ Rocket – Easy emoji usage.
+- ⚡ [Fig](https://fig.io) – Forget every terminal app. Fig is your terminal, reimagined
+- ⚡ [Rocket](https://matthewpalmer.net/rocket/) – Easy emoji usage.
 - ⚡ [Rectangle](https://rectangleapp.com) – The missing window manager in macOS.
-- ⚡ Sublime Text – Fast editor I use a lot to open / edit files when I need speed.
-- ⚡ [VSCodium](https://vscodium.com) – Highly customisable editor. Started very basic, but starts to act like a IDE if you want to. VSCodium is the privacy friendly port of VSCode.
+- ⚡ [Sublime Text](https://www.sublimetext.com/) – Fast editor I use a lot to open / edit files when I need speed.
+- ⚡ [VSCodium](https://vscodium.com) – Highly customisable editor. Started very basic, but starts to act like an IDE if you want to. VSCodium is the privacy friendly port of Visual Studio Code.
 
 Other facts:
 
@@ -56,26 +54,26 @@ Inspiration sources I use:
 
 I'm interested in:
 
-- 💡 Web Application development
-- 💡 Mobile Application development
-- 💡 Open Source Software Contribution
-- Continuous Integration
-- 💡 Reverse Engineering
-- 💡 Machine Learning
+- 🕸️ Web Application development
+- 📱 Mobile Application development
+- 👨‍💻 Open Source Software Contribution
+- ♻️ Continuous Integration
+- 🔭 Reverse Engineering
+- 🪄 Machine Learning
 - 💡 Artificial Intelligence
-- 💡 Automotive Electrification
-- 💡 Automotive Hardware & Software
-- 💡 Arduino, Raspberry Pi
+- ⚡ Automotive Electrification
+- 🏎️ Automotive Hardware & Software
+- 💻 Arduino, Raspberry Pi
 - 💡 Home Lab Hardware & Software
-- 💡 Home Automation
-- 💡 Bot Automation
-- 💡 Gadgets
-- 💡 People and their mindset
+- 🤖 Home Automation
+- 🤖 Bot Automation
+- 🤓 Gadgets
+- 🧠 People and their mindset
 
 All In One Installation (aka .dotfiles)
 ---
 
-Every few months I [cleanup my computer(s)](https://www.imore.com/how-do-clean-install-macos) by formatting the entire machine and start with a [fresh OS installation](https://www.imore.com/how-do-clean-install-macos). In order to install all my fellow apps and tools in a fast and convenient way, I've created a setup tool with .dotfiles. Look around and you'll find some inspiration. Promised!
+Every few months I [cleanup my computer(s)](https://www.imore.com/how-do-clean-install-macos) by formatting the entire machine and start with a [fresh OS installation](https://www.imore.com/how-do-clean-install-macos). In order to install all my fellow apps and tools in a fast and convenient way, I've created a setup tool with some `.dotfiles`. Look around and you'll find some inspiration. Promised!
 
 https://github.com/topscoder/topscoder/blob/main/installer.sh
 
