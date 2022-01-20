@@ -94,7 +94,7 @@ done
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 apps=(
     '.app-vscodium' 
-    '.app-chromium' 
+#    '.app-chromium' 
     '.app-alfred'
     '.app-dropbox-maestral' 
     '.app-mackup'
