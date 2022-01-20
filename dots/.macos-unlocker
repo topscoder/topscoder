@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 #################################################################################
-# File  	    :   .macos-dock
-# Description	:   Sets macOS Dock related settings, configurations, et al.
-# Args         	:   Unlock quarantaine mode for all /Applications
+# File  	    :   .macos-unlocker
+# Description	:   Unlock quarantaine mode for all /Applications
+# Args         	:   
 # Dependencies  :   utils.sh, sudo
 # Author       	:   Boyan Atanasov, topscoder
 # Email         :   
