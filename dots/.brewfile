@@ -32,7 +32,7 @@ brew "vim"
 brew "wget"
 
 # fancier `top`
-brew "glances"
+brew "htop"
 
 # See: https://sourabhbajaj.com/mac-setup/BashCompletion/
 brew "bash-completion"
@@ -47,6 +47,7 @@ brew "git-friendly/git-friendly/git-friendly"
 
 # Just some useful apps
 brew "antibody"             # Antibody is a shell plugin manager.
+brew "bitwarden-cli"
 brew "docker-compose"
 brew "docker"
 brew "dockutil"
@@ -54,14 +55,15 @@ brew "mackup"
 brew "pipenv"
 brew "zsh-async"
 brew "zsh"
+brew "fig" # You need this also.
 
 # Install native GUI applications using brew --cask
 cask "appcleaner"
 cask "commander-one"
 cask "discord"
-cask "keepassxc"
+cask "bitwarden"
 cask "keepingyouawake"
-cask "opera"
+cask "brave-browser"
 cask "pycharm-ce"
 cask "rectangle"
 cask "rocket"
