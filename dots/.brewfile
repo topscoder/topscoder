@@ -59,20 +59,13 @@ brew "fig" # You need this also.
 
 # Install native GUI applications using brew --cask
 cask "appcleaner"
-cask "commander-one"
 cask "discord"
 cask "bitwarden"
 cask "keepingyouawake"
 cask "brave-browser"
 cask "pycharm-ce"
 cask "rectangle"
-cask "rocket"
-cask "ubersicht"
 cask "vmware-fusion"
-cask "vscodium"
-
-# Free Database Management Tool
-cask "valentina-studio"
 
 # Quick Look Plugins
 cask "betterzip"
