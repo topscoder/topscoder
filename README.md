@@ -29,13 +29,13 @@ Apps I'm using:
 - ⚡ [keepingyouawake](https://github.com/newmarcel/KeepingYouAwake) – to keep my Mac awake when I want to.
 - ⚡ [Bitwarden](https://github.com/bitwarden) – open source password manager. Used 1Password as a paying customer until they switched to monthly payments.
 - ⚡ Discord – connecting to other people a.k.a. IRC 2021
-- ⚡ Docker – all things virtual.
-- ⚡ Filezilla - open source FTP, FTPS, SFTP client.
+- ⚡ Docker – all things virtual
+- ⚡ Filezilla - open source FTP, FTPS, SFTP client
 - ⚡ [Fig](https://fig.io) – Forget every terminal app. Fig is your terminal, reimagined
-- ⚡ [Rocket](https://matthewpalmer.net/rocket/) – Easy emoji usage.
-- ⚡ [Rectangle](https://rectangleapp.com) – The missing window manager in macOS.
-- ⚡ [Sublime Text](https://www.sublimetext.com/) – Fast editor I use a lot to open / edit files when I need speed.
-- ⚡ [VSCodium](https://vscodium.com) – Highly customisable editor. Started very basic, but starts to act like an IDE if you want to. VSCodium is the privacy friendly port of Visual Studio Code.
+- ⚡ [AltTab](https://alt-tab-macos.netlify.app) - Windows like alt-tab on macOS
+- ⚡ [Rectangle](https://rectangleapp.com) – The missing window manager in macOS
+- ⚡ [Sublime Text](https://www.sublimetext.com/) – Fast editor I use a lot to open / edit files when I need speed
+- ⚡ [VSCodium](https://vscodium.com) – Highly customisable editor. Started very basic, but starts to act like an IDE if you want to. VSCodium is the privacy friendly port of Visual Studio Code
 
 Other facts:
 
