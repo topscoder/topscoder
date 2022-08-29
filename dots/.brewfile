@@ -1,3 +1,4 @@
+# vim: set filetype=shell
 #####################################################################################
 # File  	    :   .brewfile
 # Description	:   Contains a list of brew instructions to install 
