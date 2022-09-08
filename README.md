@@ -36,6 +36,7 @@ Apps I'm using:
 - ⚡ [Rectangle](https://rectangleapp.com) – The missing window manager in macOS
 - ⚡ [Sublime Text](https://www.sublimetext.com/) – Fast editor I use a lot to open / edit files when I need speed
 - ⚡ [VSCodium](https://vscodium.com) – Highly customisable editor. Started very basic, but starts to act like an IDE if you want to. VSCodium is the privacy friendly port of Visual Studio Code
+- ⚡ [Notion](https://www.notion.so) - Clean, easy to use notes app. Despite it's easy to use, it's full of neat 'n nerdy features!
 
 Other facts:
 
