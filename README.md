@@ -10,7 +10,7 @@ Gear I have around:
 
 - 🤖 [Apple Macbook](https://amzn.to/2TZfxGt)
 - 🤖 [Logitech MX Master](https://amzn.to/3rUZpSU)
-- 🤖 [Mac keyboard](https://amzn.to/3ClWdEG) (I'm looking for a [mechanical alternative](https://amzn.to/2VtoRTH))
+- 🤖 [Keychron Q2] – Mechanical keyboard, because hipster
 - 🤖 [Sony WH-1000XM3](https://amzn.to/3lDCWbW)
 - 🤖 [Google Coral TPU](https://coral.ai/products/)
 - 🤖 [Arduino's, Raspberry Pi's](https://amzn.to/3lAMvs7)
