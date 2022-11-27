@@ -56,7 +56,6 @@ brew "mackup"
 brew "pipenv"
 brew "zsh-async"
 brew "zsh"
-brew "fig" # You need this also.
 
 # Install native GUI applications using brew --cask
 cask "appcleaner"
@@ -64,9 +63,9 @@ cask "discord"
 cask "bitwarden"
 cask "keepingyouawake"
 cask "brave-browser"
-cask "pycharm-ce"
 cask "rectangle"
 cask "vmware-fusion"
+cask "warp"
 
 # Quick Look Plugins
 cask "betterzip"
