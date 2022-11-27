@@ -31,8 +31,7 @@ Apps I'm using:
 - ⚡ Discord – connecting to other people a.k.a. IRC 2021
 - ⚡ Docker – all things virtual
 - ⚡ Filezilla - open source FTP, FTPS, SFTP client
-- ⚡ [Fig](https://fig.io) – Forget every terminal app. Fig is your terminal, reimagined
-- ⚡ [AltTab](https://alt-tab-macos.netlify.app) - Windows like alt-tab on macOS
+- ⚡ [Warp](https://warp.dev) – Forget every terminal app. Warp is reimagined from the ground up.
 - ⚡ [Rectangle](https://rectangleapp.com) – The missing window manager in macOS
 - ⚡ [Sublime Text](https://www.sublimetext.com/) – Fast editor I use a lot to open / edit files when I need speed
 - ⚡ [VSCodium](https://vscodium.com) – Highly customisable editor. Started very basic, but starts to act like an IDE if you want to. VSCodium is the privacy friendly port of Visual Studio Code
