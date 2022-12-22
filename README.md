@@ -62,13 +62,12 @@ I'm interested in:
 - 🪄 Machine Learning
 - 💡 Artificial Intelligence
 - ⚡ Automotive Electrification
-- 🏎️ Automotive Hardware & Software
+- 🏎️ Automotive Hardware & Software hacking
 - 💻 Arduino, Raspberry Pi
-- 💡 Home Lab Hardware & Software
 - 🤖 Home Automation
-- 🤖 Bot Automation
+- 🤖 Robotics
 - 🤓 Gadgets
-- 🧠 People and their mindset
+- 🧠 Psychology
 
 All In One Installation (aka .dotfiles)
 ---
