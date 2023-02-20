@@ -2,7 +2,7 @@
 
 #################################################################################
 # File  	    :   .app-zsh                                                                                              
-# Description	:   Installs ohmyzsh, antidote zsh manager, typewritten
+# Description	:   Installs ohmyzsh, antidote zsh manager
 # Args         	:   none
 # Dependencies  :   utils.sh, brew, npm
 # Author       	:   topscoder
@@ -29,9 +29,6 @@ fi
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
-
-# Install typewritten
-npm install -g typewritten
 
 log_note " >> Reload zsh by using 'exec zsh' "
 

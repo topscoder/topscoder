@@ -21,7 +21,6 @@ fi
 # Removed applications should be uninstalled
 brew uninstall "bitwarden-cli" \
                 "bitwarden" \
-                "eloston-chromium" \
                 "caprine" \
                 "element" \
                 "kitty"

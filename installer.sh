@@ -23,40 +23,41 @@ log_info "installer.sh starting..."
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Only clone if .dotfiles are not installed already
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-if ! [[ $(pwd) =~ (\.dotfiles$) ]];
+if [ ! -d "~/.dotfiles" ]
 then
     brew install git
-    git clone https://github.com/topscoder/topscoder.git ./.dotfiles/
-    cd .dotfiles/
+    git clone https://github.com/topscoder/topscoder.git ~/.dotfiles/
 else
     git update
 fi
 
+cd ~/.dotfiles/
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Check if we are in .dotfiles folder now. It's important. We need 'em
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-if ! [[ $(pwd) =~ (\.dotfiles$) ]];
-then
-    print_error " ==> IT LOOKS LIKE THE .DOTFILES FOLDER IS NOT INSTALLED."
-    print_error " ==> PLEASE FIX IT. "
-    print_error " ==> I QUIT. 👋 "
-    exit 1
-fi
+# if [ ! -d "~/.dotfiles" ]
+# then
+#     print_error " ==> IT LOOKS LIKE THE .DOTFILES FOLDER IS NOT INSTALLED."
+#     print_error " ==> PLEASE FIX IT. "
+#     print_error " ==> I QUIT. 👋 "
+#     exit 1
+# fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Install ZSH shell
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-sh ./dots/.app-zsh
+sh ~/.dotfiles/dots/.app-zsh
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Install Homebrew
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-sh ./dots/.app-homebrew
+sh ~/.dotfiles/dots/.app-homebrew
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Install and upgrade (by default) cli-tools, apps from the Brewfile (.brewfile).
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-brew bundle --file=./dots/.brewfile
+brew bundle --file=~/.dotfiles/dots/.brewfile
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Install Irvue wallpaper manager from App Store
@@ -66,12 +67,12 @@ mas install 1039633667
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Unlock quarantaine mode for apps
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-sh ./dots/.macos-unlocker
+sh ~/.dotfiles/dots/.macos-unlocker
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Git configuration
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-sh ./dots/.conf-git
+sh ~/.dotfiles/dots/.conf-git
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # macOS configuration
@@ -84,7 +85,7 @@ conf_mac=(
 
 for cfile in "${conf_mac[@]}"; 
 do
-    cmd="sh ./dots/$cfile"
+    cmd="sh ~/.dotfiles/dots/$cfile"
     /bin/bash -c "$cmd"
 done
 
@@ -94,15 +95,13 @@ done
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 apps=(
     '.app-vscodium' 
-#    '.app-chromium' 
-#    '.app-alfred'
     '.app-dropbox-maestral' 
     '.app-mackup'
     '.app-sync')
 
 for afile in "${apps[@]}"; 
 do
-    cmd="sh ./dots/$afile"
+    cmd="sh ~/.dotfiles/dots/$afile"
     /bin/bash -c "$cmd"
 done
 
