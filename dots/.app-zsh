@@ -16,23 +16,25 @@ start_block "Running .app-zsh"
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh)
 
-# Enable antibody (zsh plugin manager)
-if ! test `which antibody`
+# Enable antidote (zsh plugin manager)
+if ! test `which antidote`
 then
-    brew install antibody
+    brew install antidote
+    
+    if ! grep -Fxq "source ${ZDOTDIR:-~}/.antidote/antidote.zsh" ~/.zshrc
+    then
+        echo "source ${ZDOTDIR:-~}/.antidote/antidote.zsh" >> ~/.zshrc
+    fi
 fi
 
-# Add `source <(antibody init)` command to .zshrc
-if ! grep -Fxq "source <(antibody init)" ~/.zshrc
-then
-    echo "source <(antibody init)" >> ~/.zshrc
-fi
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
 
 # Add `antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins` command to .zshrc
-if ! grep -Fxq "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" ~/.zshrc
-then
-    echo "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" >> ~/.zshrc
-fi
+# if ! grep -Fxq "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" ~/.zshrc
+# then
+#     echo "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" >> ~/.zshrc
+# fi
 
 # Install typewritten
 npm install -g typewritten
