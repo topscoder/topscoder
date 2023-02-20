@@ -95,7 +95,7 @@ done
 apps=(
     '.app-vscodium' 
 #    '.app-chromium' 
-    '.app-alfred'
+#    '.app-alfred'
     '.app-dropbox-maestral' 
     '.app-mackup'
     '.app-sync')
