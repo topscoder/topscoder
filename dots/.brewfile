@@ -47,7 +47,7 @@ tap "git-friendly/homebrew-git-friendly"
 brew "git-friendly/git-friendly/git-friendly"
 
 # Just some useful apps
-brew "antibody"             # Antibody is a shell plugin manager.
+brew "antidote"             # Antidote is a shell plugin manager.
 brew "bitwarden-cli"
 brew "docker-compose"
 brew "docker"
@@ -64,7 +64,7 @@ cask "bitwarden"
 cask "keepingyouawake"
 cask "brave-browser"
 cask "rectangle"
-cask "vmware-fusion"
+<!-- cask "vmware-fusion" -->
 cask "warp"
 
 # Quick Look Plugins

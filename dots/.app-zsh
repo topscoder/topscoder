@@ -2,7 +2,7 @@
 
 #################################################################################
 # File  	    :   .app-zsh                                                                                              
-# Description	:   Installs ohmyzsh, antibody zsh manager, typewritten
+# Description	:   Installs ohmyzsh, antidote zsh manager, typewritten
 # Args         	:   none
 # Dependencies  :   utils.sh, brew, npm
 # Author       	:   topscoder
@@ -29,12 +29,6 @@ fi
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
-
-# Add `antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins` command to .zshrc
-# if ! grep -Fxq "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" ~/.zshrc
-# then
-#     echo "antibody bundle < ~/.dotfiles/dots/.app-zsh-plugins" >> ~/.zshrc
-# fi
 
 # Install typewritten
 npm install -g typewritten

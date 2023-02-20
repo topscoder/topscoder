@@ -45,8 +45,10 @@ if ! xcode-select --print-path &> /dev/null; then
 fi
 ##############################################################################################################
 
-# Ensure Homebrew is installed
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install Homebrew
+if test ! $(which brew); then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 answer_is_yes() {
   [[ "$REPLY" =~ ^[Yy]$ ]] \
