@@ -40,10 +40,13 @@ if ! xcode-select --print-path &> /dev/null; then
     # https://github.com/alrra/dotfiles/issues/10
 
     sudo xcodebuild -license
-    print_result $? 'Agree with the XCode Command Line Tools licence'
+    print_result $? 'Agree with the XCode Command Line Tools license'
 
 fi
 ##############################################################################################################
+
+# Ensure Homebrew is installed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 answer_is_yes() {
   [[ "$REPLY" =~ ^[Yy]$ ]] \
